@@ -1,0 +1,8 @@
+C:\Users\Minty\OneDrive\Documents\SharpDevelop Projects\MSS\MintySensorMonitor\obj\Debug\MintySensorMonitor.csprojResolveAssemblyReference.cache
+C:\Users\Minty\OneDrive\Documents\SharpDevelop Projects\MSS\MintySensorMonitor\obj\Debug\MintySensorMonitor.csproj.GenerateResource.Cache
+C:\Users\Minty\OneDrive\Documents\SharpDevelop Projects\MSS\MintySensorMonitor\obj\Debug\com.mintymods.msm.MsmNotificationIcon.resources
+C:\Users\Minty\OneDrive\Documents\SharpDevelop Projects\MSS\MintySensorMonitor\bin\Debug\MintySensorMonitor.exe.config
+C:\Users\Minty\OneDrive\Documents\SharpDevelop Projects\MSS\MintySensorMonitor\bin\Debug\MintySensorMonitor.exe
+C:\Users\Minty\OneDrive\Documents\SharpDevelop Projects\MSS\MintySensorMonitor\bin\Debug\MintySensorMonitor.pdb
+C:\Users\Minty\OneDrive\Documents\SharpDevelop Projects\MSS\MintySensorMonitor\obj\Debug\MintySensorMonitor.exe
+C:\Users\Minty\OneDrive\Documents\SharpDevelop Projects\MSS\MintySensorMonitor\obj\Debug\MintySensorMonitor.pdb
