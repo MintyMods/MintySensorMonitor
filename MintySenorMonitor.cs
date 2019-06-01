@@ -2,8 +2,8 @@
 using System.Web.Script.Serialization;
 using System.Diagnostics;
 
-namespace com.mintymods.msm {
-	
+namespace com.mintymods.msm
+{
 	/***************************************************************************************************************
 	 * MSM (MintySensorMonitor) is the integration between HWiNFO and MSS (MintySensorServer)
 	 * SENSORS <-?-> HWiNFO <-?-> MSM[C#:SHM] <--> MSS[JNI:JSON] <--> API[JAVA:REST/JSOM/HTML]
@@ -14,14 +14,15 @@ namespace com.mintymods.msm {
 	 * MSQ:https://github.com/MintyMods/MintySQ
 	/***************************************************************************************************************/
 	
-	public class MintySenorMonitor {
-		
-		public string getSensorInfoAsJSON() {
+	public class MintySenorMonitor
+	{
+		public string getSensorInfoAsJSON()
+		{
 			return getSensorInfoAsJSON(new MsmMonitorRequest());
 		}
 		
-		public string getSensorInfoAsJSON(MsmMonitorRequest request) {
-			
+		public string getSensorInfoAsJSON(MsmMonitorRequest request)
+		{
 			var timer = Stopwatch.StartNew();
 			MsmMonitorResponse response = new MsmMonitorResponse();
 			HWiNFOWrapper wrapper = new HWiNFOWrapper(request, response);
@@ -31,7 +32,7 @@ namespace com.mintymods.msm {
 				timer.Stop();
 				response.time_taken_ms = timer.ElapsedMilliseconds;
 				json = new JavaScriptSerializer().Serialize(response);
-			} catch(MsmException e) {
+			} catch (MsmException e) {
 				if (response.exception == null) {
 					response.exception = e;
 				}

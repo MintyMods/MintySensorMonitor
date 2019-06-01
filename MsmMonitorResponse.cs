@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Diagnostics;
 
-namespace com.mintymods.msm {
-
-	public class MsmMonitorResponse {
-		
+namespace com.mintymods.msm
+{
+	public class MsmMonitorResponse
+	{
 		public string source = "MSM[JNI]<--HWiNFO[SHM]";
 		public string guid = System.Guid.NewGuid().ToString();
 		public List<string> names;
@@ -14,12 +14,12 @@ namespace com.mintymods.msm {
 		public MsmException exception;
 		public bool debug;
 		public long time_taken_ms;
-		
-		public MsmMonitorResponse() {
+
+		public MsmMonitorResponse()
+		{
 			names = new List<string>();
 			sensors = new List<Sensor>();
 			stats = new List<SensorReading>();
 		}
-		
 	}
 }
