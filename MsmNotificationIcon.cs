@@ -3,7 +3,7 @@ using System.Drawing;
 using System.Threading;
 using System.Windows.Forms;
 
-namespace com.mintymods.msm
+namespace mintymods
 {
 	
 	public sealed class MsmNotificationIcon
@@ -11,6 +11,7 @@ namespace com.mintymods.msm
 		private NotifyIcon notifyIcon;
 		private ContextMenu notificationMenu;
 		
+	
 		public MsmNotificationIcon()
 		{
 			notifyIcon = new NotifyIcon();
@@ -34,26 +35,28 @@ namespace com.mintymods.msm
 			return menu;
 		}
 		
-		[STAThread]
-		public static void Main(string[] args)
-		{
-			Application.EnableVisualStyles();
-			Application.SetCompatibleTextRenderingDefault(false);
-			
-			bool isFirstInstance;
-			using (Mutex mtx = new Mutex(true, "MintySensorMonitor", out isFirstInstance)) {
-				if (isFirstInstance) {
-					MsmNotificationIcon icon = new MsmNotificationIcon();
-					icon.notifyIcon.Visible = true;
-					Application.Run();
-					icon.notifyIcon.Dispose();
-				} else {
-					// The application is already running
-					// TODO: Display message box or change focus to existing application instance
-					MessageBox.Show("MSM - Minty's Server Monitor is already running");
-				}
-			} 
-		}
+		
+//		[STAThread]
+//		public static void Main(string[] args)
+//		{
+//			Application.EnableVisualStyles();
+//			Application.SetCompatibleTextRenderingDefault(false);
+//			
+//			bool isFirstInstance;
+//			using (Mutex mtx = new Mutex(true, "MintySensorMonitor", out isFirstInstance)) {
+//				if (isFirstInstance) {
+//					MsmNotificationIcon icon = new MsmNotificationIcon();
+//					icon.notifyIcon.Visible = true;
+//					Application.Run();
+//					icon.notifyIcon.Dispose();
+//				} else {
+//					// The application is already running
+//					// TODO: Display message box or change focus to existing application instance
+//					MessageBox.Show("MSM - Minty's Server Monitor is already running");
+//				}
+//			} 
+//		}
+		
 
 		private void menuAdminClick(object sender, EventArgs e)
 		{

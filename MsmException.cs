@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace com.mintymods.msm
+namespace mintymods
 {
 	public class MsmException : Exception, ISerializable
 	{

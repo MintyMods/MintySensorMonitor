@@ -1,20 +1,29 @@
 ﻿using System;
 using System.Web.Script.Serialization;
 using System.Diagnostics;
+using System.Runtime.InteropServices; 
 
-namespace com.mintymods.msm
+namespace mintymods
 {
+	
 	public class MintySenorMonitor
 	{
+	
 		public string getSensorInfoAsJSON()
 		{
-			return getSensorInfoAsJSON(new MsmMonitorRequest());
+			return getSensorInfoAsJSON(new MsmMonitorRequest("DEFAULT"));
+		}
+		
+		public string getSensorInfoAsJSON(String json)
+		{
+			MsmMonitorRequest request = new MsmMonitorRequest(json);
+			return getSensorInfoAsJSON(request); // @todo parse json --> request
 		}
 		
 		public string getSensorInfoAsJSON(MsmMonitorRequest request)
 		{
 			var timer = Stopwatch.StartNew();
-			MsmMonitorResponse response = new MsmMonitorResponse();
+			MsmMonitorResponse response = new MsmMonitorResponse(request);
 			HWiNFOWrapper wrapper = new HWiNFOWrapper(request, response);
 			string json = "";
 			try {
@@ -33,7 +42,7 @@ namespace com.mintymods.msm
 				wrapper.Dispose();
 			}
 		
-			if (request.debug) {
+			if (request.debug == "true") {
 				Debug.WriteLine(json);
 			}
 			return json;

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace com.mintymods.msm
+namespace mintymods
 {
 	public class SensorReading
 	{

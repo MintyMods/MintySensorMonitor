@@ -1,5 +1,5 @@
 ﻿using System;
-namespace com.mintymods.msm
+namespace mintymods
 {
 	public enum SensorType
 	{

@@ -1,13 +1,21 @@
 ﻿using System;
 
-namespace com.mintymods.msm
+namespace mintymods
 {
 	public class MsmMonitorRequest
 	{
-	
+
+		public MsmMonitorRequest() {
+			json = "NO_PARAMS";
+		}
+		
+		public MsmMonitorRequest(String request) {
+			json = request;
+		}
+		
 		public string source = "MSS[JNI]";
-		public string guid = System.Guid.NewGuid().ToString();
-		public bool debug = false;
+		public string json;
+		public string debug = "false";
 
 	}
 }

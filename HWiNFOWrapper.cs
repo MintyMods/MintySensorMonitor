@@ -3,7 +3,7 @@ using System.Diagnostics;
 using System.IO.MemoryMappedFiles;
 using System.Runtime.InteropServices;
 
-namespace com.mintymods.msm
+namespace mintymods
 {
 	public class HWiNFOWrapper
 	{
@@ -107,7 +107,7 @@ namespace com.mintymods.msm
 							try {
 								_HWiNFO_SENSOR_ELEMENT SensorElement = (_HWiNFO_SENSOR_ELEMENT)Marshal.PtrToStructure(handle.AddrOfPinnedObject(),
 									                                       typeof(_HWiNFO_SENSOR_ELEMENT));
-								if (request.debug) {
+								if (request.debug == "true") {
 									debugSensorElements(SensorElement);
 								}
 								
@@ -137,7 +137,7 @@ namespace com.mintymods.msm
 							try {	
 								_HWiNFO_READING_ELEMENT ReadingElement = (_HWiNFO_READING_ELEMENT)Marshal.PtrToStructure(handle.AddrOfPinnedObject(),
 									                                         typeof(_HWiNFO_READING_ELEMENT));
-								if (request.debug) {
+								if (request.debug == "true") {
 									debugSensorReadings(ReadingElement);
 								}
 								
