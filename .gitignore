@@ -1,5 +1,7 @@
 /obj/
 /bin/
+/jna/
+/jni/
 
 
 ### STS ###
