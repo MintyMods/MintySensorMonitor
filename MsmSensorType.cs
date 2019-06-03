@@ -1,8 +1,8 @@
 ﻿using System;
-namespace mintymods
-{
-	public enum SensorType
-	{
+namespace mintymods {
+	
+	public enum MsmSensorType {
+		
 		NONE = 0,
 		TEMP,
 		VOLT,
@@ -12,5 +12,7 @@ namespace mintymods
 		CLOCK,
 		USAGE,
 		OTHER
+			
 	}
+	
 }

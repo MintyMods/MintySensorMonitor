@@ -1,0 +1,11 @@
+#e:/Development/swigwin-4.0.0/swig.exe -c++ -java MSM.i
+export DEV_HOME=e:/Development
+export SWIG_HOME=$DEV_HOME/swigwin-4.0.0/
+export MINGW_HOME=$DEV_HOME/MinGW
+export SRC_HOME=$DEV_HOME/MintySM/jni
+export PATH=$PATH:$MINGW_HOME/bin/
+
+$SWIG_HOME/swig.exe -Wall -c++ -java $SRC_HOME/MSM.i
+$MINGW_HOME/bin/gcc -lstdc++ -c $SRC_HOME/MSM_wrap.cxx -o $SRC_HOME/MSM_wrap.o -I/$JAVA_HOME/include/ -I/$JAVA_HOME/include/win32
+
+$MINGW_HOME/bin/ld -Lstdc++ -G $SRC_HOME/MSM_wrap.o  -o $SRC_HOME/libMSM.so -L/$JAVA_HOME/include/ -L/$JAVA_HOME/include/win32

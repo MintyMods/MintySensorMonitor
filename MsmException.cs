@@ -1,30 +1,24 @@
 ﻿using System;
 using System.Runtime.Serialization;
 
-namespace mintymods
-{
-	public class MsmException : Exception, ISerializable
-	{
+namespace mintymods {
+	
+	public class MsmException : Exception, ISerializable {
 		
-		public Exception exception;
 		public string message;
-		public string hint;
-		public DateTime date;
+		public MsmExceptionHint hint = new MsmExceptionHint();
+		public Exception exception;
 		
-		public MsmException(string message)
-			: base(message)
-		{
-			this.message = message;
+		public MsmException(string message) : base(message) {
 			this.message = message;
 		}
 
-		public MsmException(string hint, Exception e)
-			: base(hint, e)
-		{
+		public MsmException(string message, Exception e) : base(message, e)	{
 			this.message = e.Message;
-			this.hint = hint; 
 			this.exception = e;
+			this.hint.message = e.Message;
 		}
 
 	}
+	
 }

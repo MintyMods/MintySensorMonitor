@@ -1,10 +1,8 @@
 ﻿using System;
 
-namespace mintymods
-{
+namespace mintymods {
 	
-	public class Sensor
-	{
+	public class MsmSensor {
 
 		public UInt32 id;
 		public int instance;

@@ -1,10 +1,10 @@
 ﻿using System;
 
-namespace mintymods
-{
-	public class SensorReading
-	{
-		public SensorType type;
+namespace mintymods {
+	
+	public class MsmSensorReading 	{
+		
+		public MsmSensorType type;
 		public UInt32 id;
 		public int index;
 		public string label;
@@ -15,4 +15,5 @@ namespace mintymods
 		public double avg;
 		
 	}
+	
 }

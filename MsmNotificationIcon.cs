@@ -80,9 +80,8 @@ namespace mintymods
 		
 		private void menuDebugClick(object sender, EventArgs e)
 		{
-			MintySenorMonitor monitor = new MintySenorMonitor();
-			string json = monitor.getSensorInfoAsJSON();
-			Console.Write(json);
+
+			
 		}
 		
 		private void menuExitClick(object sender, EventArgs e)

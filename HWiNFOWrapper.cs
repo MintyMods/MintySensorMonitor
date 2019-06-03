@@ -1,12 +1,11 @@
 ﻿using System;
-using System.Diagnostics;
 using System.IO.MemoryMappedFiles;
 using System.Runtime.InteropServices;
 
-namespace mintymods
-{
-	public class HWiNFOWrapper
-	{
+namespace mintymods {
+	
+	public class HWiNFOWrapper 	{
+		
 		public const string HWiNFO_SHM_NAME = "Global\\HWiNFO_SENS_SM2";
 		public const string HWiNFO_SHM_MUTEX = "Global\\HWiNFO_SM2_MUTEX";
 		public const int HWiNFO_SENSORS_LENGTH = 128;
@@ -14,8 +13,7 @@ namespace mintymods
 		public MsmMonitorRequest request;
 		public MsmMonitorResponse response;
 		
-		public enum SENSOR_READING_TYPE
-		{
+		public enum SENSOR_READING_TYPE {
 			SENSOR_TYPE_NONE = 0,
 			SENSOR_TYPE_TEMP,
 			SENSOR_TYPE_VOLT,
@@ -28,8 +26,7 @@ namespace mintymods
 		};
 		  
 		[StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
-		public struct _HWiNFO_READING_ELEMENT
-		{
+		public struct _HWiNFO_READING_ELEMENT {
 			public SENSOR_READING_TYPE tReading;
 			public UInt32 dwSensorIndex;
 			public UInt32 dwReadingID;
@@ -46,8 +43,7 @@ namespace mintymods
 		};
 
 		[StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
-		public struct _HWiNFO_SENSOR_ELEMENT
-		{
+		public struct _HWiNFO_SENSOR_ELEMENT {
 			public UInt32 dwSensorID;
 			public UInt32 dwSensorInst;
 			[MarshalAs(UnmanagedType.ByValTStr, SizeConst = HWiNFO_SENSORS_LENGTH)]
@@ -57,8 +53,7 @@ namespace mintymods
 		};
 
 		[StructLayout(LayoutKind.Sequential, Pack = 1, CharSet = CharSet.Ansi)]
-		public struct _HWiNFO_SHM
-		{
+		public struct _HWiNFO_SHM {
 			public UInt32 dwSignature;
 			public UInt32 dwVersion;
 			public UInt32 dwRevision;
@@ -79,14 +74,13 @@ namespace mintymods
 		private uint offsetReadingSection;
 		private uint sizeReadingSection;
 
-		public HWiNFOWrapper(MsmMonitorRequest request, MsmMonitorResponse response)
-		{
+		public HWiNFOWrapper(MsmMonitorRequest request, MsmMonitorResponse response) {
 			this.request = request;
 			this.response = response;
 		}
 		
-		public MsmMonitorResponse getSensorReadings()
-		{
+		public MsmMonitorResponse poll() {
+			
 			try {
 				mmf = MemoryMappedFile.OpenExisting(HWiNFO_SHM_NAME, MemoryMappedFileRights.Read);
 				using (var accessor = mmf.CreateViewAccessor(0, Marshal.SizeOf(typeof(_HWiNFO_SHM)), MemoryMappedFileAccess.Read)) {
@@ -107,13 +101,13 @@ namespace mintymods
 							try {
 								_HWiNFO_SENSOR_ELEMENT SensorElement = (_HWiNFO_SENSOR_ELEMENT)Marshal.PtrToStructure(handle.AddrOfPinnedObject(),
 									                                       typeof(_HWiNFO_SENSOR_ELEMENT));
-								if (request.debug == "true") {
+								if (request.debug) {
 									debugSensorElements(SensorElement);
 								}
 								
 								response.names.Add(SensorElement.szSensorNameUser);
 								
-								Sensor sensor = new Sensor();
+								MsmSensor sensor = new MsmSensor();
 								sensor.id = SensorElement.dwSensorID;
 								sensor.instance = (int)SensorElement.dwSensorInst;
 								sensor.name = SensorElement.szSensorNameOrig;
@@ -137,12 +131,12 @@ namespace mintymods
 							try {	
 								_HWiNFO_READING_ELEMENT ReadingElement = (_HWiNFO_READING_ELEMENT)Marshal.PtrToStructure(handle.AddrOfPinnedObject(),
 									                                         typeof(_HWiNFO_READING_ELEMENT));
-								if (request.debug == "true") {
+								if (request.debug) {
 									debugSensorReadings(ReadingElement);
 								}
 								
-								SensorReading reading = new SensorReading();
-								reading.type = (SensorType)ReadingElement.tReading;
+								MsmSensorReading reading = new MsmSensorReading();
+								reading.type = (MsmSensorType)ReadingElement.tReading;
 								reading.id = ReadingElement.dwReadingID;
 								reading.index = (int)ReadingElement.dwSensorIndex;
 								reading.label = (string)ReadingElement.szLabelUser;
@@ -166,23 +160,20 @@ namespace mintymods
 			return response;
 		}
 		
-		public void Dispose()
-		{
+		public void Dispose() {
 			if (mmf != null) {
 				mmf.Dispose();
 			}
 		}
 		
-		public void debugSensorElements(_HWiNFO_SENSOR_ELEMENT SensorElement)
-		{
+		public void debugSensorElements(_HWiNFO_SENSOR_ELEMENT SensorElement) {
 			Console.WriteLine(String.Format("dwSensorID : {0}", SensorElement.dwSensorID));
 			Console.WriteLine(String.Format("dwSensorInst : {0}", SensorElement.dwSensorInst));
 			Console.WriteLine(String.Format("szSensorNameOrig : {0}", SensorElement.szSensorNameOrig));
 			Console.WriteLine(String.Format("szSensorNameUser : {0}", SensorElement.szSensorNameUser));						
 		}
 		
-		public void debugSensorReadings(_HWiNFO_READING_ELEMENT ReadingElement)
-		{
+		public void debugSensorReadings(_HWiNFO_READING_ELEMENT ReadingElement) {
 			Console.WriteLine(String.Format("tReading sensor type : {0}", ReadingElement.tReading));
 			Console.WriteLine(String.Format("dwSensorIndex : {0} ; Sensor Name: {1}", ReadingElement.dwSensorIndex, response.names[(int)ReadingElement.dwSensorIndex]));
 			Console.WriteLine(String.Format("dwReadingID : {0}", ReadingElement.dwSensorIndex));
@@ -192,4 +183,5 @@ namespace mintymods
 		}
 		
 	}
+	
 }

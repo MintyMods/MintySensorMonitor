@@ -52,6 +52,9 @@
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="Newtonsoft.Json">
+      <HintPath>Lib\Newtonsoft.Json.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core">
       <RequiredTargetFramework>3.5</RequiredTargetFramework>
@@ -71,17 +74,18 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MsmExceptionHint.cs" />
     <Compile Include="MSM.cs" />
     <Compile Include="MsmMonitorRequest.cs" />
-    <Compile Include="SensorType.cs" />
-    <Compile Include="Sensor.cs" />
+    <Compile Include="MsmSensorType.cs" />
+    <Compile Include="MsmSensor.cs" />
     <Compile Include="HWiNFOWrapper.cs" />
     <Compile Include="MsmMonitorResponse.cs" />
     <Compile Include="MsmException.cs" />
     <Compile Include="MsmNotificationIcon.cs" />
     <Compile Include="MintySenorMonitor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SensorReading.cs" />
+    <Compile Include="MsmSensorReading.cs" />
   </ItemGroup>
   <ItemGroup>
     <EmbeddedResource Include="MsmNotificationIcon.resx">
@@ -90,6 +94,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Lib\Newtonsoft.Json.dll" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
