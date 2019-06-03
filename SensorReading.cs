@@ -5,7 +5,7 @@ namespace mintymods
 	public class SensorReading
 	{
 		public SensorType type;
-		public int id;
+		public UInt32 id;
 		public int index;
 		public string label;
 		public string unit;

@@ -143,7 +143,7 @@ namespace mintymods
 								
 								SensorReading reading = new SensorReading();
 								reading.type = (SensorType)ReadingElement.tReading;
-								reading.id = (int)ReadingElement.dwReadingID;
+								reading.id = ReadingElement.dwReadingID;
 								reading.index = (int)ReadingElement.dwSensorIndex;
 								reading.label = (string)ReadingElement.szLabelUser;
 								reading.unit = (string)ReadingElement.szUnit;
@@ -175,20 +175,20 @@ namespace mintymods
 		
 		public void debugSensorElements(_HWiNFO_SENSOR_ELEMENT SensorElement)
 		{
-			Debug.WriteLine(String.Format("dwSensorID : {0}", SensorElement.dwSensorID));
-			Debug.WriteLine(String.Format("dwSensorInst : {0}", SensorElement.dwSensorInst));
-			Debug.WriteLine(String.Format("szSensorNameOrig : {0}", SensorElement.szSensorNameOrig));
-			Debug.WriteLine(String.Format("szSensorNameUser : {0}", SensorElement.szSensorNameUser));						
+			Console.WriteLine(String.Format("dwSensorID : {0}", SensorElement.dwSensorID));
+			Console.WriteLine(String.Format("dwSensorInst : {0}", SensorElement.dwSensorInst));
+			Console.WriteLine(String.Format("szSensorNameOrig : {0}", SensorElement.szSensorNameOrig));
+			Console.WriteLine(String.Format("szSensorNameUser : {0}", SensorElement.szSensorNameUser));						
 		}
 		
 		public void debugSensorReadings(_HWiNFO_READING_ELEMENT ReadingElement)
 		{
-			Debug.WriteLine(String.Format("tReading sensor type : {0}", ReadingElement.tReading));
-			Debug.WriteLine(String.Format("dwSensorIndex : {0} ; Sensor Name: {1}", ReadingElement.dwSensorIndex, response.names[(int)ReadingElement.dwSensorIndex]));
-			Debug.WriteLine(String.Format("dwReadingID : {0}", ReadingElement.dwSensorIndex));
-			Debug.WriteLine(String.Format("szLabelUser : {0}", ReadingElement.szLabelUser));
-			Debug.WriteLine(String.Format("szUnit : {0}", ReadingElement.szUnit));
-			Debug.WriteLine(String.Format("Value : {0}", ReadingElement.Value));
+			Console.WriteLine(String.Format("tReading sensor type : {0}", ReadingElement.tReading));
+			Console.WriteLine(String.Format("dwSensorIndex : {0} ; Sensor Name: {1}", ReadingElement.dwSensorIndex, response.names[(int)ReadingElement.dwSensorIndex]));
+			Console.WriteLine(String.Format("dwReadingID : {0}", ReadingElement.dwSensorIndex));
+			Console.WriteLine(String.Format("szLabelUser : {0}", ReadingElement.szLabelUser));
+			Console.WriteLine(String.Format("szUnit : {0}", ReadingElement.szUnit));
+			Console.WriteLine(String.Format("Value : {0}", ReadingElement.Value));
 		}
 		
 	}
