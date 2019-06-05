@@ -80,7 +80,7 @@ namespace mintymods {
 		}
 		
 		public MsmMonitorResponse poll() {
-			MsmMonitorResponse response = new MsmMonitorResponse();
+			var response = new MsmMonitorResponse();
 			try {
 				mmf = MemoryMappedFile.OpenExisting(HWiNFO_SHM_NAME, MemoryMappedFileRights.Read);
 				using (var accessor = mmf.CreateViewAccessor(0, Marshal.SizeOf(typeof(_HWiNFO_SHM)), MemoryMappedFileAccess.Read)) {

@@ -20,7 +20,6 @@ namespace mintymods {
 			this.description = description;
 		}
 
-
 		
 	}
 }

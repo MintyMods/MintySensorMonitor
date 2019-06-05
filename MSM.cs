@@ -37,12 +37,12 @@ namespace mintymods {
 		}
 		
 		static void sendInvalidCommandLineJsonResponse(string[] commandLineArguments) {
-			var exception = new MsmException("Invalid JSON Request Argument");
-			exception.hint.message = "You must provide a valid JSON parameter as the ONLY argument when calling MSM";
-			exception.hint.input = Newtonsoft.Json.JsonConvert.SerializeObject(commandLineArguments); //@todo
-			exception.hint.output = "Usage: MintySensorMonitor.exe {json:here}";
-			exception.hint.result = "Example Usage: MintySensorMonitor.exe {help:true}";
-			sendInvalidJsonResponse(exception);
+			var e = new MsmException("Invalid JSON Request Argument");
+			e.hint.message = "You must provide a valid JSON parameter as the ONLY argument when calling MSM";
+			e.hint.input = Newtonsoft.Json.JsonConvert.SerializeObject(commandLineArguments);
+			e.hint.output = "Usage: MintySensorMonitor.exe {json:here}";
+			e.hint.result = "Example Usage: MintySensorMonitor.exe {help:true}";
+			sendInvalidJsonResponse(e);
 		}
 
 	}

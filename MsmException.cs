@@ -5,10 +5,10 @@ namespace mintymods {
 	public class MsmException : Exception {
 		
 		static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-		public string message;
 		public MsmExceptionHint hint = new MsmExceptionHint();
 		public Exception exception;
-		
+		public string message;
+
 		public MsmException(string message) : base(message) {
 			this.message = message;
 		}

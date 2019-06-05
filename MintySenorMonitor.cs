@@ -5,12 +5,12 @@ namespace mintymods {
 	
 	public class MintySenorMonitor 	{
 		
-		private MsmMonitorRequest request;
-		private MsmMonitorResponse response;
+		MsmMonitorRequest request;
+		MsmMonitorResponse response;
 		
 		public MintySenorMonitor(MsmMonitorRequest request) {
 			this.request = request;
-			//this.response = new MsmMonitorResponse();
+			this.response = new MsmMonitorResponse();
 		}
 		
 		public string getSensorInfoAsJSON() {

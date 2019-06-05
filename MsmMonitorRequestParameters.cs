@@ -6,8 +6,8 @@ namespace mintymods {
 		
 		public string type = "";
 		public string source = "MSS[EXE]";
-		public bool debug = false;
-		public bool help = false;
+		public bool debug;
+		public bool help;
 		
 		public MsmMonitorRequestParameters()	{
 			type = this.GetType().Name;
