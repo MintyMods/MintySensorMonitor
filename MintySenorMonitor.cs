@@ -10,15 +10,15 @@ namespace mintymods {
 		
 		public MintySenorMonitor(MsmMonitorRequest request) {
 			this.request = request;
-			this.response = new MsmMonitorResponse(request);
+			//this.response = new MsmMonitorResponse();
 		}
 		
 		public string getSensorInfoAsJSON() {
 			var timer = Stopwatch.StartNew();
-			HWiNFOWrapper wrapper = new HWiNFOWrapper(request, response);
+			var monitor = new MsmHWiNFO(request);
 			string json = "";
 			try {
-				response = wrapper.poll();
+				response = monitor.poll();
 				timer.Stop();
 				response.time_taken_ms = timer.ElapsedMilliseconds;
 				json = Newtonsoft.Json.JsonConvert.SerializeObject(response);
@@ -30,7 +30,7 @@ namespace mintymods {
 				response.time_taken_ms = timer.ElapsedMilliseconds;
 				json = Newtonsoft.Json.JsonConvert.SerializeObject(response);
 			} finally {
-				wrapper.Dispose();
+				monitor.Dispose();
 			}
 		
 			if (request.debug) {

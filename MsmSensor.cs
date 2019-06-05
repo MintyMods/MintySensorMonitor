@@ -4,10 +4,10 @@ namespace mintymods {
 	
 	public class MsmSensor {
 
+		public MsmSensorLabel label;
 		public UInt32 id;
-		public int instance;
+		public UInt32 instance;
 		public string name;
-		public string label;
 		
 	}
 	

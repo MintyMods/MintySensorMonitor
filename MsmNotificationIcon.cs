@@ -1,19 +1,17 @@
 ﻿using System;
 using System.Drawing;
-using System.Threading;
 using System.Windows.Forms;
 
-namespace mintymods
-{
+namespace mintymods {
 	
-	public sealed class MsmNotificationIcon
-	{
+	public sealed class MsmNotificationIcon {
+		
+		static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 		private NotifyIcon notifyIcon;
 		private ContextMenu notificationMenu;
 		
 	
-		public MsmNotificationIcon()
-		{
+		public MsmNotificationIcon() {
 			notifyIcon = new NotifyIcon();
 			notificationMenu = new ContextMenu(InitializeMenu());
 			notifyIcon.DoubleClick += IconDoubleClick;
@@ -22,8 +20,7 @@ namespace mintymods
 			notifyIcon.ContextMenu = notificationMenu;		
 		}
 		
-		private MenuItem[] InitializeMenu()
-		{
+		private MenuItem[] InitializeMenu() {
 			MenuItem[] menu = new MenuItem[] {
 				new MenuItem("MSS - Sensor Server", menuMSSClick),
 				new MenuItem("MSM - Sensor Monitor", menuMSMClick),
@@ -58,39 +55,31 @@ namespace mintymods
 //		}
 		
 
-		private void menuAdminClick(object sender, EventArgs e)
-		{
+		private void menuAdminClick(object sender, EventArgs e) {
 			Console.Write("Admin");
 		}
 				
-		private void menuAboutClick(object sender, EventArgs e)
-		{
+		private void menuAboutClick(object sender, EventArgs e)	{
 			Console.Write("Aboutwwwwwwwwwwwwww");
 		}
 				
-		private void menuMSSClick(object sender, EventArgs e)
-		{
+		private void menuMSSClick(object sender, EventArgs e) { 
 			Console.Write("MSS - Minty's Sensor Server");
 		}
 				
-		private void menuMSMClick(object sender, EventArgs e)
-		{
+		private void menuMSMClick(object sender, EventArgs e) {
 			Console.Write("MSM - Minty's Sensor Monitor");
 		}
 		
-		private void menuDebugClick(object sender, EventArgs e)
-		{
-
+		private void menuDebugClick(object sender, EventArgs e) {
 			
 		}
 		
-		private void menuExitClick(object sender, EventArgs e)
-		{
+		private void menuExitClick(object sender, EventArgs e) {
 			Application.Exit();
 		}
 		
-		private void IconDoubleClick(object sender, EventArgs e)
-		{
+		private void IconDoubleClick(object sender, EventArgs e) {
 			MessageBox.Show("The icon was double clicked - push notifications coming");
 		}
 

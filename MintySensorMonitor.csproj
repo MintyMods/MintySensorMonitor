@@ -49,6 +49,9 @@
     <DefineConstants>TRACE</DefineConstants>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="log4net">
+      <HintPath>Lib\log4net.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
@@ -74,12 +77,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MsmSensorLabel.cs" />
+    <Compile Include="MsmMonitorRequestParameters.cs" />
     <Compile Include="MsmExceptionHint.cs" />
     <Compile Include="MSM.cs" />
     <Compile Include="MsmMonitorRequest.cs" />
     <Compile Include="MsmSensorType.cs" />
     <Compile Include="MsmSensor.cs" />
-    <Compile Include="HWiNFOWrapper.cs" />
+    <Compile Include="MsmHWiNFO.cs" />
     <Compile Include="MsmMonitorResponse.cs" />
     <Compile Include="MsmException.cs" />
     <Compile Include="MsmNotificationIcon.cs" />
@@ -95,6 +100,13 @@
   <ItemGroup>
     <None Include="app.config" />
     <None Include="Lib\Newtonsoft.Json.dll" />
+    <EmbeddedResource Include="MsmLog4Net.config">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <LogicalName>cd </LogicalName>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="bin" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -26,3 +26,4 @@ using System.Runtime.InteropServices;
 // Build Numbers by using the '*' as shown below:
 [assembly: AssemblyVersion ("1.0.*")]
 [assembly: Guid ("776bfb60-9b2c-445e-9b66-1e9addaacf10")]
+[assembly: log4net.Config.XmlConfigurator(ConfigFile = "MsmLog4net.config")]

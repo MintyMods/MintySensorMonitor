@@ -4,14 +4,13 @@ using System.Runtime.InteropServices;
 
 namespace mintymods {
 	
-	public class HWiNFOWrapper 	{
-		
+	public class MsmHWiNFO 	{
+	
+		static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 		public const string HWiNFO_SHM_NAME = "Global\\HWiNFO_SENS_SM2";
 		public const string HWiNFO_SHM_MUTEX = "Global\\HWiNFO_SM2_MUTEX";
 		public const int HWiNFO_SENSORS_LENGTH = 128;
 		public const int HWiNFO_UNIT_LENGTH = 16;
-		public MsmMonitorRequest request;
-		public MsmMonitorResponse response;
 		
 		public enum SENSOR_READING_TYPE {
 			SENSOR_TYPE_NONE = 0,
@@ -67,20 +66,21 @@ namespace mintymods {
 		};
 	
 		MemoryMappedFile mmf;
-		private uint numSensors;
-		private uint numReadingElements;
-		private uint offsetSensorSection;
-		private uint sizeSensorElement;
-		private uint offsetReadingSection;
-		private uint sizeReadingSection;
+		MsmMonitorRequest request;
+		uint numSensors;
+		uint numReadingElements;
+		uint offsetSensorSection;
+		uint sizeSensorElement;
+		uint offsetReadingSection;
+		uint sizeReadingSection;
 
-		public HWiNFOWrapper(MsmMonitorRequest request, MsmMonitorResponse response) {
+		
+		public MsmHWiNFO(MsmMonitorRequest request) {
 			this.request = request;
-			this.response = response;
 		}
 		
 		public MsmMonitorResponse poll() {
-			
+			MsmMonitorResponse response = new MsmMonitorResponse();
 			try {
 				mmf = MemoryMappedFile.OpenExisting(HWiNFO_SHM_NAME, MemoryMappedFileRights.Read);
 				using (var accessor = mmf.CreateViewAccessor(0, Marshal.SizeOf(typeof(_HWiNFO_SHM)), MemoryMappedFileAccess.Read)) {
@@ -101,17 +101,14 @@ namespace mintymods {
 							try {
 								_HWiNFO_SENSOR_ELEMENT SensorElement = (_HWiNFO_SENSOR_ELEMENT)Marshal.PtrToStructure(handle.AddrOfPinnedObject(),
 									                                       typeof(_HWiNFO_SENSOR_ELEMENT));
-								if (request.debug) {
-									debugSensorElements(SensorElement);
-								}
+
+								debugSensorElements(SensorElement);
+								response.labels.Add(SensorElement.szSensorNameUser);
 								
-								response.names.Add(SensorElement.szSensorNameUser);
-								
-								MsmSensor sensor = new MsmSensor();
+								var sensor = new MsmSensor();
+								sensor.label = new MsmSensorLabel(SensorElement.szSensorNameOrig, SensorElement.szSensorNameUser);
 								sensor.id = SensorElement.dwSensorID;
-								sensor.instance = (int)SensorElement.dwSensorInst;
-								sensor.name = SensorElement.szSensorNameOrig;
-								sensor.label = SensorElement.szSensorNameUser;
+								sensor.instance = SensorElement.dwSensorInst;
 								response.sensors.Add(sensor);
 								
 							} catch (Exception e) {
@@ -122,7 +119,7 @@ namespace mintymods {
 							}
 						}
 					}
-					
+
 					for (UInt32 dwReading = 0; dwReading < numReadingElements; dwReading++) {
 						using (var sensor_element_accessor = mmf.CreateViewStream(offsetReadingSection + (dwReading * sizeReadingSection), sizeReadingSection, MemoryMappedFileAccess.Read)) {
 							byte[] byteBuffer = new byte[sizeReadingSection];
@@ -131,18 +128,17 @@ namespace mintymods {
 							try {	
 								_HWiNFO_READING_ELEMENT ReadingElement = (_HWiNFO_READING_ELEMENT)Marshal.PtrToStructure(handle.AddrOfPinnedObject(),
 									                                         typeof(_HWiNFO_READING_ELEMENT));
-								if (request.debug) {
-									debugSensorReadings(ReadingElement);
-								}
-								
-								MsmSensorReading reading = new MsmSensorReading();
-								reading.type = (MsmSensorType)ReadingElement.tReading;
+
+								debugSensorReadings(ReadingElement);
+								var reading = new MsmSensorReading((MsmSensorType)ReadingElement.tReading);
+								reading.label = new MsmSensorLabel(ReadingElement.szLabelOrig, ReadingElement.szLabelUser);
+								reading.sensor_index = ReadingElement.dwSensorIndex;
 								reading.id = ReadingElement.dwReadingID;
-								reading.index = (int)ReadingElement.dwSensorIndex;
-								reading.label = (string)ReadingElement.szLabelUser;
-								reading.unit = (string)ReadingElement.szUnit;
-								reading.value = (Double)ReadingElement.Value;
-								response.stats.Add(reading);
+								reading.unit = ReadingElement.szUnit;
+								reading.value = ReadingElement.Value;
+								reading.min = ReadingElement.ValueMin;
+								reading.avg = ReadingElement.ValueAvg;
+								response.readings.Add(reading);
 								
 							} catch (Exception e) {
 								response.exception = new MsmException("Error processing Reading Elements", e);
@@ -153,6 +149,7 @@ namespace mintymods {
 						}
 					}
 				}
+				
 			} catch (Exception e) {
 				response.exception = new MsmException("Error opening HWiNFO shared memory!", e);
 				throw e;
@@ -166,20 +163,24 @@ namespace mintymods {
 			}
 		}
 		
-		public void debugSensorElements(_HWiNFO_SENSOR_ELEMENT SensorElement) {
-			Console.WriteLine(String.Format("dwSensorID : {0}", SensorElement.dwSensorID));
-			Console.WriteLine(String.Format("dwSensorInst : {0}", SensorElement.dwSensorInst));
-			Console.WriteLine(String.Format("szSensorNameOrig : {0}", SensorElement.szSensorNameOrig));
-			Console.WriteLine(String.Format("szSensorNameUser : {0}", SensorElement.szSensorNameUser));						
+		void debugSensorElements(_HWiNFO_SENSOR_ELEMENT SensorElement) {
+			log.Debug("@SensorElement.dwSensorID#" + SensorElement.dwSensorID);
+			log.Debug("@SensorElement.dwSensorInst#" + SensorElement.dwSensorInst);
+			log.Debug("@SensorElement.szSensorNameOrig#" + SensorElement.szSensorNameOrig);
+			log.Debug("@SensorElement.szSensorNameUser#" + SensorElement.szSensorNameUser);
 		}
 		
-		public void debugSensorReadings(_HWiNFO_READING_ELEMENT ReadingElement) {
-			Console.WriteLine(String.Format("tReading sensor type : {0}", ReadingElement.tReading));
-			Console.WriteLine(String.Format("dwSensorIndex : {0} ; Sensor Name: {1}", ReadingElement.dwSensorIndex, response.names[(int)ReadingElement.dwSensorIndex]));
-			Console.WriteLine(String.Format("dwReadingID : {0}", ReadingElement.dwSensorIndex));
-			Console.WriteLine(String.Format("szLabelUser : {0}", ReadingElement.szLabelUser));
-			Console.WriteLine(String.Format("szUnit : {0}", ReadingElement.szUnit));
-			Console.WriteLine(String.Format("Value : {0}", ReadingElement.Value));
+		void debugSensorReadings(_HWiNFO_READING_ELEMENT ReadingElement) {
+			log.Debug("SENSOR_READING_TYPE@ReadingElement.tReading#" + ReadingElement.tReading);
+			log.Debug("UInt32@ReadingElement.dwSensorIndex#" + ReadingElement.dwSensorIndex);
+			log.Debug("Unit32@ReadingElement.dwReadingID#" + ReadingElement.dwReadingID);
+			log.Debug("string@ReadingElement.szLabelOrig#" + ReadingElement.szLabelOrig);
+			log.Debug("string@ReadingElement.szLabelUser#" + ReadingElement.szLabelUser);
+			log.Debug("string@ReadingElement.szUnit#" + ReadingElement.szUnit);
+			log.Debug("double@ReadingElement.Value#" + ReadingElement.Value);
+			log.Debug("double@ReadingElement.ValueMin#" + ReadingElement.ValueMin);
+			log.Debug("double@ReadingElement.ValueMax#" + ReadingElement.ValueMax);
+			log.Debug("double@ReadingElement.ValueAvg#" + ReadingElement.ValueAvg);
 		}
 		
 	}

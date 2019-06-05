@@ -9,3 +9,12 @@
 	 * MSS:https://github.com/MintyMods/MintySS
 	 * MSQ:https://github.com/MintyMods/MintySQ
 	/***************************************************************************************************************/
+	
+	
+	// MSM (This Project) Java --(Process Builder <-> EXE) --> C#
+	
+	
+	
+	// @todo ::  MSS:Java --(JNA)-->  C/C++ --(COM Interop)--> MSM:C#
+	
+	// @todo ::  MSS:Java --(TCP)-->  HWiNFO

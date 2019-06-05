@@ -1,4 +1,5 @@
 ﻿using System;
+
 namespace mintymods {
 	
 	public enum MsmSensorType {

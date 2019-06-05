@@ -2,18 +2,22 @@
 
 namespace mintymods {
 	
-	public class MsmSensorReading 	{
+	public class MsmSensorReading {
 		
-		public MsmSensorType type;
+		MsmSensorType type;
+		public MsmSensorLabel label;
 		public UInt32 id;
-		public int index;
-		public string label;
+		public UInt32 sensor_index;
 		public string unit;
 		public double value;
 		public double min;
 		public double max;
 		public double avg;
 		
+		public MsmSensorReading(MsmSensorType type) {
+			this.type = type;
+		}
+			
 	}
 	
 }

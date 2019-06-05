@@ -1,46 +1,48 @@
 ﻿using System;
-using Newtonsoft.Json.Converters;
-
-// @todo ::  MSS:Java --(JNA)-->  C/C++ --(COM Interop)--> MSM:C#
-// @todo ::  MSS:Java --(TCP)-->  HWiNFO
 
 namespace mintymods {
 	
 	public class MSM {
 
-		// Java --(Process Builder via EXE) --> C#
-		
-		public const int REQUEST_BODY_OFFSET = 0;
+		static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+		const int REQUEST_BODY_OFFSET = 0;
 				
 		public static void Main(string[] commandLineArguments) { 
-			
+			log.Info("MSM starting...");
 			if (commandLineArguments.Length != 1) {
+				log.Warn("Invalid command line specified : @JSON#" + commandLineArguments);
 				sendInvalidCommandLineJsonResponse(commandLineArguments);
 			} else {
 
 				try {
-					string json = commandLineArguments[REQUEST_BODY_OFFSET];
-					MsmMonitorRequest request = new MsmMonitorRequest(json);
-					MintySenorMonitor monitor = new MintySenorMonitor(request);
+					var json = commandLineArguments[REQUEST_BODY_OFFSET];
+					var request = new MsmMonitorRequest(json);
+					var monitor = new MintySenorMonitor(request);
 					sendJsonResponse(monitor.getSensorInfoAsJSON());
 				} catch (MsmException e) {
-					sendJsonResponse(Newtonsoft.Json.JsonConvert.SerializeObject(e));
+					log.Error("@"+ e.InnerException.Source + "#" + e.Message, e);
+					sendInvalidJsonResponse(e);
 				}
 				
 			}
     	}
       
-    	public static void sendJsonResponse(String json) {
+    	static void sendJsonResponse(String json) {
 			Console.WriteLine(json);
+		}
+
+    	static void sendInvalidJsonResponse(MsmException exception) {
+			log.Error(exception);
+			Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(exception));
 		}
 		
 		static void sendInvalidCommandLineJsonResponse(string[] commandLineArguments) {
-			MsmException exception = new MsmException("Invalid JSON Request Argument");
-			exception.hint.message = "You must provide a valid JSON parameter as the ONLY argument";
-			exception.hint.input = Newtonsoft.Json.JsonConvert.SerializeObject(commandLineArguments);
+			var exception = new MsmException("Invalid JSON Request Argument");
+			exception.hint.message = "You must provide a valid JSON parameter as the ONLY argument when calling MSM";
+			exception.hint.input = Newtonsoft.Json.JsonConvert.SerializeObject(commandLineArguments); //@todo
 			exception.hint.output = "Usage: MintySensorMonitor.exe {json:here}";
-			exception.hint.result = "Example Usage: MintySensorMonitor.exe {help:true, debug:false}";
-			sendJsonResponse(Newtonsoft.Json.JsonConvert.SerializeObject(exception));
+			exception.hint.result = "Example Usage: MintySensorMonitor.exe {help:true}";
+			sendInvalidJsonResponse(exception);
 		}
 
 	}

@@ -1,45 +1,44 @@
 ﻿using System;
-using System.IO;
-using Microsoft.CSharp.RuntimeBinder;
 using System.Web.Script.Serialization;
-
-
 
 namespace mintymods {
 	
-	public class MsmMonitorRequest {
+	public class MsmMonitorRequest : MsmMonitorRequestParameters {
 		
-		MsmMonitorResponse respose;
-		public string type;
-		public string source = "MSS[EXE]";
-		public bool debug = false;
-
+		static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
+	 
 		public MsmMonitorRequest(String json) {
-			this.respose = new MsmMonitorResponse(this);
-			type = this.GetType().Name;
+			log.Debug("@JSON#" + json);
+			type = GetType().Name;
 			
 			try {
-				var request = Newtonsoft.Json.JsonConvert.SerializeObject(json);
-				Console.WriteLine("REQUEST:-");		
-				Console.WriteLine(request);		
-
-				MsmMonitorRequest response = Newtonsoft.Json.JsonConvert.DeserializeObject<MsmMonitorRequest>(request);
-				Console.WriteLine("RESPONSE:-");		
-				Console.WriteLine(response);		
+				
+				MsmMonitorRequestParameters data = Newtonsoft.Json.JsonConvert.DeserializeObject<MsmMonitorRequestParameters>(json);
+				debugRequestJsonData(data);
+				this.type = data.type;	
+				this.debug = data.debug;
+				this.help = data.help;
 
 			} catch (Exception e) {
-				Console.WriteLine("Exception" );	
-				MsmException exception = new MsmException("Unable to parse JSON request", e);
+				log.Debug("Unable to parse JSON request @#");
+				var exception = new MsmException("Unable to parse JSON request", e);
 				exception.hint.message = "Your JSON parameter was malformed";
 				exception.hint.input = new JavaScriptSerializer().Serialize(json);
 				exception.hint.output = e.Message;
-				exception.hint.result = "################";
+				exception.hint.result = "################"; //@todo
 				exception.exception = e;
+				log.Error(exception);
 				throw e;
 			}
 
 		}
-
+		
+		void debugRequestJsonData(MsmMonitorRequestParameters parameters) {
+			log.Debug("@MsmMonitorRequest()#" + parameters);	
+			log.Debug("@TYPE#" + parameters.type);	
+			log.Debug("@DEBUG#" + parameters.debug);	
+			log.Debug("@HELP#" + parameters.help);				
+		}
 	
 	}
 	

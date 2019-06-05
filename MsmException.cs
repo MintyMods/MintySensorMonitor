@@ -1,10 +1,10 @@
 ﻿using System;
-using System.Runtime.Serialization;
 
 namespace mintymods {
 	
-	public class MsmException : Exception, ISerializable {
+	public class MsmException : Exception {
 		
+		static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 		public string message;
 		public MsmExceptionHint hint = new MsmExceptionHint();
 		public Exception exception;
