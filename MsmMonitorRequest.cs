@@ -64,7 +64,6 @@ namespace mintymods {
 			log.Debug("@MsmMonitorRequest()#" + parameters);	
 			log.Debug("@TYPE#" + parameters.type);	
 			log.Debug("@DEBUG#" + parameters.debug);	
-			log.Debug("@LOG_LEVEL#" + parameters.log_level);
 			log.Debug("@HELP#" + parameters.help);				
 		}
 	

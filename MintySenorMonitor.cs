@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Diagnostics;
+using System.Management;
 
 namespace mintymods {
 	
@@ -15,7 +16,8 @@ namespace mintymods {
 		
 		public string getSensorInfoAsJSON() {
 			var timer = Stopwatch.StartNew();
-			var monitor = new MsmHWiNFO(request);
+			MsmServiceInterface monitor = new MsmServiceHWiNFO(request);
+			//MsmServiceInterface monitor = new MsmServiceExample(request);
 			string json = "";
 			try {
 				response = monitor.poll();
@@ -30,7 +32,7 @@ namespace mintymods {
 				response.time_taken_ms = timer.ElapsedMilliseconds;
 				json = Newtonsoft.Json.JsonConvert.SerializeObject(response);
 			} finally {
-				monitor.Dispose();
+				monitor.dispose();
 			}
 		
 			if (request.debug) {

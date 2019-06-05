@@ -4,7 +4,7 @@ using System.Runtime.InteropServices;
 
 namespace mintymods {
 	
-	public class MsmHWiNFO 	{
+	public class MsmServiceHWiNFO : MsmServiceInterface {
 	
 		static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
 		public const string HWiNFO_SHM_NAME = "Global\\HWiNFO_SENS_SM2";
@@ -67,6 +67,7 @@ namespace mintymods {
 	
 		MemoryMappedFile mmf;
 		MsmMonitorRequest request;
+		MsmMonitorResponse response;
 		uint numSensors;
 		uint numReadingElements;
 		uint offsetSensorSection;
@@ -75,12 +76,15 @@ namespace mintymods {
 		uint sizeReadingSection;
 
 		
-		public MsmHWiNFO(MsmMonitorRequest request) {
+		public MsmServiceHWiNFO(MsmMonitorRequest request) {
 			this.request = request;
+			response = new MsmMonitorResponse();
+			response.source = "MSM[SHM]HWiNFO";
+			response.version = "1.0";			
 		}
 		
 		public MsmMonitorResponse poll() {
-			var response = new MsmMonitorResponse();
+			
 			try {
 				mmf = MemoryMappedFile.OpenExisting(HWiNFO_SHM_NAME, MemoryMappedFileRights.Read);
 				using (var accessor = mmf.CreateViewAccessor(0, Marshal.SizeOf(typeof(_HWiNFO_SHM)), MemoryMappedFileAccess.Read)) {
@@ -112,8 +116,8 @@ namespace mintymods {
 								response.sensors.Add(sensor);
 								
 							} catch (Exception e) {
-								response.exception = new MsmException("Error processing Sensor Elements", e);							
-								throw e;
+								response.exception = new MsmException("Error processing Sensor Elements", e);
+								log.Error(e);								
 							} finally {
 								handle.Free();
 							}
@@ -142,7 +146,7 @@ namespace mintymods {
 								
 							} catch (Exception e) {
 								response.exception = new MsmException("Error processing Reading Elements", e);
-								throw e;
+								log.Error(e);				
 							} finally {
 								handle.Free();
 							}
@@ -152,12 +156,12 @@ namespace mintymods {
 				
 			} catch (Exception e) {
 				response.exception = new MsmException("Error opening HWiNFO shared memory!", e);
-				throw e;
+				log.Error(e);
 			}
 			return response;
 		}
 		
-		public void Dispose() {
+		public void dispose() {
 			if (mmf != null) {
 				mmf.Dispose();
 			}
