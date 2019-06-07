@@ -12,9 +12,9 @@ namespace mintymods {
 			type = GetType().Name;
 			
 			try {
-				
 				MsmMonitorRequestParameters data = Newtonsoft.Json.JsonConvert.DeserializeObject<MsmMonitorRequestParameters>(json);
 				debugRequestJsonData(data);
+				this.source = data.source;
 				this.type = data.type;	
 				this.debug = data.debug;
 				this.help = data.help;
@@ -27,7 +27,7 @@ namespace mintymods {
 				e.hint.input = new JavaScriptSerializer().Serialize(json);
 				e.hint.output = e.Message;
 				e.exception = e;
-				log.Error(e);
+				log.Debug(e);
 			}
 
 		}
@@ -62,6 +62,7 @@ namespace mintymods {
 		
 		void debugRequestJsonData(MsmMonitorRequestParameters parameters) {
 			log.Debug("@MsmMonitorRequest()#" + parameters);	
+			log.Debug("@SOURCE#" + parameters.source);	
 			log.Debug("@TYPE#" + parameters.type);	
 			log.Debug("@DEBUG#" + parameters.debug);	
 			log.Debug("@HELP#" + parameters.help);				

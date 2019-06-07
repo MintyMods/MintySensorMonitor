@@ -80,6 +80,7 @@
   <ItemGroup>
     <Compile Include="MsmServiceExampleGetPath.cs" />
     <Compile Include="MsmServiceExample.cs" />
+    <Compile Include="MsmServiceHWiNFO.cs" />
     <Compile Include="MsmServiceInterface.cs" />
     <Compile Include="MsmServiceController.cs" />
     <Compile Include="MsmSensorLabel.cs" />
@@ -89,7 +90,7 @@
     <Compile Include="MsmMonitorRequest.cs" />
     <Compile Include="MsmSensorType.cs" />
     <Compile Include="MsmSensor.cs" />
-    <Compile Include="MsmServiceHWiNFO.cs" />
+    <Compile Include="PRIVATE_MsmServiceHWiNFO.cs" />
     <Compile Include="MsmMonitorResponse.cs" />
     <Compile Include="MsmException.cs" />
     <Compile Include="MsmNotificationIcon.cs" />

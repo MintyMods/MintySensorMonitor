@@ -6,6 +6,8 @@ namespace mintymods {
 	
 		MsmMonitorResponse poll();
 		
+		string getRequestMapping();
+		
 		void dispose();
 
 	}

@@ -1,11 +1,11 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Management;
 
 namespace mintymods {
 	
 	public class MintySenorMonitor 	{
-		
+
+		static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);		
 		MsmMonitorRequest request;
 		MsmMonitorResponse response;
 		
@@ -16,8 +16,9 @@ namespace mintymods {
 		
 		public string getSensorInfoAsJSON() {
 			var timer = Stopwatch.StartNew();
-			MsmServiceInterface monitor = new MsmServiceHWiNFO(request);
-			//MsmServiceInterface monitor = new MsmServiceExample(request);
+			MsmServiceController controller = new MsmServiceController();
+			MsmServiceInterface monitor = controller.getMonitorForRequest(request);
+			
 			string json = "";
 			try {
 				response = monitor.poll();
@@ -36,6 +37,7 @@ namespace mintymods {
 			}
 		
 			if (request.debug) {
+				log.Debug(json);
 				Debug.WriteLine(json);
 			}
 			return json;

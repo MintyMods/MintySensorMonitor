@@ -11,7 +11,7 @@ namespace mintymods {
 		public MsmException exception;
 		public List<string> labels;
 		public string type;
-		public string source = "MSM[SHM]HWiNFO";
+		public string source = "MSM[SERVICE]";
 		public string version = "0.5A";
 		public bool debug;
 		public long time_taken_ms;

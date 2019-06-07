@@ -8,9 +8,9 @@ namespace mintymods {
 		const int REQUEST_BODY_OFFSET = 0;
 				
 		public static void Main(string[] commandLineArguments) { 
-			log.Info("MSM starting...");
+			log.Debug("MSM starting...");
 			if (commandLineArguments.Length != 1) {
-				log.Warn("Invalid command line specified : @JSON#" + commandLineArguments);
+				log.Debug("Invalid command line specified : @JSON#" + commandLineArguments);
 				sendInvalidCommandLineJsonResponse(commandLineArguments);
 			} else {
 
@@ -18,21 +18,21 @@ namespace mintymods {
 					var json = commandLineArguments[REQUEST_BODY_OFFSET];
 					var request = new MsmMonitorRequest(json);
 					var monitor = new MintySenorMonitor(request);
-					sendJsonResponse(monitor.getSensorInfoAsJSON());
+					sendValidJsonResponse(monitor.getSensorInfoAsJSON());
 				} catch (MsmException e) {
-					log.Error("@"+ e.InnerException.Source + "#" + e.Message, e);
+					log.Debug("@"+ e.InnerException.Source + "#" + e.Message, e);
 					sendInvalidJsonResponse(e);
 				}
 				
 			}
     	}
       
-    	static void sendJsonResponse(String json) {
+    	static void sendValidJsonResponse(String json) {
 			Console.WriteLine(json);
 		}
 
     	static void sendInvalidJsonResponse(MsmException exception) {
-			log.Error(exception);
+			log.Debug(exception);
 			Console.WriteLine(Newtonsoft.Json.JsonConvert.SerializeObject(exception));
 		}
 		

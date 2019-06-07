@@ -56,19 +56,19 @@ namespace mintymods {
 		
 
 		private void menuAdminClick(object sender, EventArgs e) {
-			Console.Write("Admin");
+			log.Debug("Admin");
 		}
 				
 		private void menuAboutClick(object sender, EventArgs e)	{
-			Console.Write("Aboutwwwwwwwwwwwwww");
+			log.Debug("Aboutwwwwwwwwwwwwww");
 		}
 				
 		private void menuMSSClick(object sender, EventArgs e) { 
-			Console.Write("MSS - Minty's Sensor Server");
+			log.Debug("MSS - Minty's Sensor Server");
 		}
 				
 		private void menuMSMClick(object sender, EventArgs e) {
-			Console.Write("MSM - Minty's Sensor Monitor");
+			log.Debug("MSM - Minty's Sensor Monitor");
 		}
 		
 		private void menuDebugClick(object sender, EventArgs e) {
