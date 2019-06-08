@@ -6,7 +6,7 @@ namespace mintymods {
 	public class MintySenorMonitor 	{
 
 		static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);		
-		MsmMonitorRequest request;
+		readonly MsmMonitorRequest request;
 		MsmMonitorResponse response;
 		
 		public MintySenorMonitor(MsmMonitorRequest request) {
@@ -16,7 +16,7 @@ namespace mintymods {
 		
 		public string getSensorInfoAsJSON() {
 			var timer = Stopwatch.StartNew();
-			MsmServiceController controller = new MsmServiceController();
+			var controller = new MsmServiceController();
 			MsmServiceInterface monitor = controller.getMonitorForRequest(request);
 			
 			string json = "";

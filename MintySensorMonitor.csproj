@@ -51,36 +51,22 @@
   <ItemGroup>
     <Reference Include="log4net">
       <HintPath>Lib\log4net.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
+    <Reference Include="MintyServiceHWiNFO">
+      <HintPath>Lib\MintyServiceHWiNFO.dll</HintPath>
+    </Reference>
     <Reference Include="Newtonsoft.Json">
       <HintPath>Lib\Newtonsoft.Json.dll</HintPath>
+      <EmbedInteropTypes>False</EmbedInteropTypes>
     </Reference>
     <Reference Include="System" />
-    <Reference Include="System.Core">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Data" />
-    <Reference Include="System.Data.DataSetExtensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Drawing" />
-    <Reference Include="System.Management" />
-    <Reference Include="System.Web.Extensions">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
-    <Reference Include="System.Windows.Forms" />
-    <Reference Include="System.Xml" />
-    <Reference Include="System.Xml.Linq">
-      <RequiredTargetFramework>3.5</RequiredTargetFramework>
-    </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="MsmServiceExampleGetPath.cs" />
     <Compile Include="MsmServiceExample.cs" />
-    <Compile Include="MsmServiceHWiNFO.cs" />
     <Compile Include="MsmServiceInterface.cs" />
     <Compile Include="MsmServiceController.cs" />
     <Compile Include="MsmSensorLabel.cs" />
@@ -90,18 +76,11 @@
     <Compile Include="MsmMonitorRequest.cs" />
     <Compile Include="MsmSensorType.cs" />
     <Compile Include="MsmSensor.cs" />
-    <Compile Include="PRIVATE_MsmServiceHWiNFO.cs" />
     <Compile Include="MsmMonitorResponse.cs" />
     <Compile Include="MsmException.cs" />
-    <Compile Include="MsmNotificationIcon.cs" />
     <Compile Include="MintySenorMonitor.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="MsmSensorReading.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="MsmNotificationIcon.resx">
-      <DependentUpon>MsmNotificationIcon.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />

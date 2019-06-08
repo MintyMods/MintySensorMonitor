@@ -4,8 +4,8 @@ namespace mintymods {
 
 	public class MsmSensorLabel {
 		
-		string value;
-		string description;
+		public string value;
+		public string description;
 
 		public MsmSensorLabel(string value, string description) {
 			this.value = value;
@@ -18,6 +18,18 @@ namespace mintymods {
 
 		public void setDescription(string description) {
 			this.description = description;
+		}
+
+		public string getSensorLabel() {
+			return value + "#" + description;
+		}
+
+		public string getValue() {
+			return value;
+		}
+
+		public string getDescription() {
+			return description;
 		}
 
 		

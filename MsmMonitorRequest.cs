@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Web.Script.Serialization;
 
 namespace mintymods {
 	
@@ -24,7 +23,7 @@ namespace mintymods {
 				log.Debug("Unable to parse JSON request @#");
 				var e = new MsmException("Unable to parse JSON request", exception);
 				e.hint.message = "Your JSON parameter was malformed";
-				e.hint.input = new JavaScriptSerializer().Serialize(json);
+				e.hint.input = Newtonsoft.Json.JsonConvert.SerializeObject(json);
 				e.hint.output = e.Message;
 				e.exception = e;
 				log.Debug(e);

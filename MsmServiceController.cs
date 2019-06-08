@@ -1,4 +1,5 @@
 ﻿using System;
+using MintyServiceHWiNFO;
 
 namespace mintymods {
 
