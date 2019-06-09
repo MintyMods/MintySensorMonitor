@@ -84,6 +84,8 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="app.config" />
+    <None Include="Lib\log4net.dll" />
+    <None Include="Lib\MintyServiceHWiNFO.dll" />
     <None Include="Lib\Newtonsoft.Json.dll" />
     <EmbeddedResource Include="MsmLog4Net.config">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>

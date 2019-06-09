@@ -4,7 +4,7 @@ namespace mintymods {
 	
 	public class MsmSensorReading {
 		
-		MsmSensorType type;
+		public MsmSensorType type;
 		public MsmSensorLabel label;
 		public UInt32 id;
 		public UInt32 sensor_index = 1;
