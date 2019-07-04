@@ -66,6 +66,7 @@
     <Reference Include="System" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="MsmLogging.cs" />
     <Compile Include="MsmServiceExample.cs" />
     <Compile Include="MsmServiceInterface.cs" />
     <Compile Include="MsmServiceController.cs" />

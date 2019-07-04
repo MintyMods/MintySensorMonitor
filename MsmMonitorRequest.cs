@@ -11,13 +11,14 @@ namespace mintymods {
 			type = GetType().Name;
 			
 			try {
+
+				MsmLogging.configureLogging();
 				MsmMonitorRequestParameters data = Newtonsoft.Json.JsonConvert.DeserializeObject<MsmMonitorRequestParameters>(json);
 				debugRequestJsonData(data);
 				this.source = data.source;
 				this.type = data.type;	
 				this.debug = data.debug;
 				this.help = data.help;
-				configureLoggingLevel();
 
 			} catch (Exception exception) {
 				log.Debug("Unable to parse JSON request @#");
@@ -30,34 +31,6 @@ namespace mintymods {
 			}
 
 		}
-		
-		void configureLoggingLevel() {
-				
-			if (debug) {
-				setLoggingLevel("DEBUG");
-				((log4net.Repository.Hierarchy.Hierarchy)log4net.LogManager.GetRepository()).RaiseConfigurationChanged(EventArgs.Empty);
-				log.Info(" ** Debug logging enabled ** ");
-			} 
-			
-		}
-		
-		void setLoggingLevel(string level) {
-            
-            log4net.Repository.ILoggerRepository[] repositories = log4net.LogManager.GetAllRepositories();
-
-            foreach (log4net.Repository.ILoggerRepository repository in repositories) {
-                repository.Threshold = repository.LevelMap[level];
-                log4net.Repository.Hierarchy.Hierarchy hier = (log4net.Repository.Hierarchy.Hierarchy)repository;
-                log4net.Core.ILogger[] loggers=hier.GetCurrentLoggers();
-                foreach (log4net.Core.ILogger logger in loggers) {
-                    ((log4net.Repository.Hierarchy.Logger) logger).Level = hier.LevelMap[level];
-                }
-            }
-
-            log4net.Repository.Hierarchy.Hierarchy h = (log4net.Repository.Hierarchy.Hierarchy)log4net.LogManager.GetRepository();
-            log4net.Repository.Hierarchy.Logger rootLogger = h.Root;
-            rootLogger.Level = h.LevelMap[level];
-        }		
 		
 		void debugRequestJsonData(MsmMonitorRequestParameters parameters) {
 			log.Debug("@MsmMonitorRequest()#" + parameters);	
