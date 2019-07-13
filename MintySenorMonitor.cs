@@ -12,19 +12,24 @@ namespace mintymods {
 		public MintySenorMonitor(MsmMonitorRequest request) {
 			this.request = request;
 			this.response = new MsmMonitorResponse();
+            log.Debug("Created new MintySensorMonitor");
 		}
 		
 		public string getSensorInfoAsJSON() {
 			var timer = Stopwatch.StartNew();
+            log.Debug("@Timer started#" + timer);
 			var controller = new MsmServiceController();
-			MsmServiceInterface monitor = controller.getMonitorForRequest(request);
-			
-			string json = "";
+            log.Debug("@Created Service Controller#" + controller);
+            MsmServiceInterface monitor = controller.getMonitorForRequest(request);
+            log.Debug("@Created monitor#" + monitor);
+            string json = "";
 			try {
 				response = monitor.poll();
+                log.Debug("@Monitor Polled Response#" + response);
 				timer.Stop();
 				response.time_taken_ms = timer.ElapsedMilliseconds;
 				json = Newtonsoft.Json.JsonConvert.SerializeObject(response);
+                log.Debug("@JSON#" + json);
 			} catch (MsmException e) {
 				if (response.exception == null) {
 					response.exception = e;

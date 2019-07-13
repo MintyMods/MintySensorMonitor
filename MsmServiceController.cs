@@ -34,11 +34,12 @@ namespace mintymods {
 		}
 		
 		MsmMonitorRequestParameters getExampleJson() {
-			var example = new MsmMonitorRequestParameters();
-			example.source = MsmServiceExample.REQUEST_MAPPING;
-			example.debug = true;
-			example.help = true;
-			return example;
+            var example = new MsmMonitorRequestParameters {
+                source = MsmServiceExample.REQUEST_MAPPING,
+                debug = true,
+                help = true
+            };
+            return example;
 		}
 		
 	}

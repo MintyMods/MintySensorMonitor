@@ -14,10 +14,11 @@ namespace mintymods {
 		
 		public MsmServiceExample(MsmMonitorRequest request) {
 			this.request = request;
-			response = new MsmMonitorResponse();
-			response.source = getRequestMapping();
-			response.version = "1.0";		
-		}
+            response = new MsmMonitorResponse {
+                source = getRequestMapping(),
+                version = "1.0"
+            };
+        }
 	
 		public string getRequestMapping() {
 			return MsmServiceExample.REQUEST_MAPPING;
@@ -31,33 +32,35 @@ namespace mintymods {
 			log.Debug("Request received @SOURCE#" + request.source);
 			
 			const uint id = 12345;
-			var sensor = new MsmSensor();
-			sensor.label = new MsmSensorLabel("value","description");  
-			sensor.id = id;
-			//sensor.name = "EXAMPLE:CPU";
-			sensor.instance = 1; // instance_id for multiples like CPU[1], CPU[2]
-			response.sensors.Add(sensor);
-			response.labels.Add("sensor.label");			
+            var sensor = new MsmSensor {
+                label = new MsmSensorLabel("value", "description"),
+                id = id,
+                instance = 1 // instance_id for multiples like CPU[1], CPU[2]
+            };
+            response.sensors.Add(sensor);
+			response.labels.Add("sensor.label");
 
-			var volts = new MsmSensorReading(MsmSensorType.VOLT);
-			volts.label = new MsmSensorLabel("CPU[" + sensor.instance + "]VOLT","Central Processor Voltage");
-			volts.id = id;
-			volts.unit = "Volt(s)";
-			volts.value = 1.154667;
-			volts.min = 1.228763;
-			volts.max = 1.354786;
-			volts.avg = 1.286443;
-			response.readings.Add(volts);			
+            var volts = new MsmSensorReading(MsmSensorType.VOLT) {
+                label = new MsmSensorLabel("CPU[" + sensor.instance + "]VOLT", "Central Processor Voltage"),
+                id = id,
+                unit = "Volt(s)",
+                value = 1.154667,
+                min = 1.228763,
+                max = 1.354786,
+                avg = 1.286443
+            };
+            response.readings.Add(volts);
 
-			var rpm = new MsmSensorReading(MsmSensorType.FAN);
-			rpm.label = new MsmSensorLabel("CPU[" + sensor.instance + "]FAN","Central Processor Fan Speed");
-			rpm.id = id;
-			rpm.unit = "Rpm";
-			rpm.value = 45.898765;
-			rpm.min = 0.0;
-			rpm.max = 305346.12312;
-			rpm.avg = 40.73450;
-			response.readings.Add(rpm);				
+            var rpm = new MsmSensorReading(MsmSensorType.FAN) {
+                label = new MsmSensorLabel("CPU[" + sensor.instance + "]FAN", "Central Processor Fan Speed"),
+                id = id,
+                unit = "Rpm",
+                value = 45.898765,
+                min = 0.0,
+                max = 305346.12312,
+                avg = 40.73450
+            };
+            response.readings.Add(rpm);				
 			
 			return response;
 		}

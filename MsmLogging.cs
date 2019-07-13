@@ -5,7 +5,7 @@ namespace mintymods {
 	public static class MsmLogging {
 				
 		static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-		public static string LEVEL = "DEBUG";
+		public static string LEVEL = "INFO";
 		
 		public static void configureLogging() {
 			configureLogging(true);
