@@ -180,4 +180,4 @@ MintySensorMonitor.exe {source:'MSM[JSON]EXAMPLE'}
   
 	
 ## License
-Minty Sensor Monitor is licensed under The MIT License (MIT). Which means that you can use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. But you always need to state that MintyMods is the original author of this template.
+MSM is licensed under The [GNU General Public License version 3](https://www.gnu.org/licenses/gpl-3.0.en.html).
