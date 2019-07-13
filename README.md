@@ -27,10 +27,11 @@ This information can be utilised using 3rd party sofware such as:-
 The sister project [MSS - Minty Sensor Server](https://github.com/MintyMods/MintySS) requires integration between various 3rd party sensor information providers who mostly output this sensor information via native C# libraries or directly via Shared Memory access. 
 As MSS has been developed using JAVA it is difficult to consume this information directly so MSM provides a bridge between these native C# software components and JAVA via a simple JSON request / response model.
 
+
 ## For more information see the following projects:-
-MSS : [Minty Sensor Server](https://github.com/MintyMods/MintySensorServer)
-MSM : [Minty Sensor Monitor](https://github.com/MintyMods/MintySensorMonitor)
-MSM2MSS : [Minty Sensor Monitor 2 Minty Sensor Server JNI Wrapper](https://github.com/MintyMods/MSM2MSS)
+* MSS : [Minty Sensor Server](https://github.com/MintyMods/MintySensorServer)
+* MSM : [Minty Sensor Monitor](https://github.com/MintyMods/MintySensorMonitor)
+* MSM2MSS : [Minty Sensor Monitor 2 Minty Sensor Server JNI Wrapper](https://github.com/MintyMods/MSM2MSS)
 
 
 
