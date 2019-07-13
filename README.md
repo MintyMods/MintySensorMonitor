@@ -28,18 +28,18 @@ This information can be utilised using 3rd party sofware such as:-
 	
 
 ## GOAL : Integrate available sensor information with MSS - Minty Sensor Server 
-The larger project being [MSS](https://github.com/MintyMods/MintySS) requires integration between the various 3rd party sensor information providers who mostly output via native C# libraries / Shared Memory access. 
-Minty Sensor Server has been developed in JAVA is unable to easily consume this information so Minty Sensor Monitor provides the bridge between these native components and JAVA via JSON request / response.
+The sister project [MSS - Minty Sensor Server](https://github.com/MintyMods/MintySS) requires integration between various 3rd party sensor information providers who mostly output this sensor information via native C# libraries or directly via Shared Memory access. 
+As MSS has been developed using JAVA it is difficult to consume this information directly so MSM provides a bridge between these native C# software components and JAVA via a simple JSON request / response model.
 
 ## For more information see the following projects:-
 
-   * Minty Sensor Server : [MSS](https://github.com/MintyMods/MintySensorServer)
-   * Minty Sensor Monitor : [MSM](https://github.com/MintyMods/MintySensorMonitor)
-   * MintySm2MintySSJniWrapper : [MSM2MSS](https://github.com/MintyMods/MintySm2MintySsJniWrapper)
+	* Minty Sensor Server : [MSS](https://github.com/MintyMods/MintySensorServer)
+	* Minty Sensor Monitor : [MSM](https://github.com/MintyMods/MintySensorMonitor)
+	* Minty Sensor Monitor 2 Minty Sensor Server JNI Wrapper : [MSM2MSS](https://github.com/MintyMods/MSM2MSS)
 
-### MSM (This Project) C# <--> C++ <--> Java 
+## This Project (MSM) C# <--> (MSM2MSS) C++ <--> (MSS) Java 
 
-SENSORS <-?-> HWiNFO <-SHM-> MSM[C#:JSON] <--> MSM2MSS[C++:JSON] <--> MSS[JNI:JSON] <--> API[JAVA:REST/JSON/HTML]
+SENSORS <-?-> HWiNFO <-SHM-> MSM[C#] <-JSON-> MSM2MSS[C++] <-JSON-> MSS[JNI] <-JSON-> API[JAVA:REST/JSON/HTML]
 
 ## MintySensorServer(MSS:Java) <json> ProcessBuilder <json> MintySensorMonitor(MSM:C#)
 Basic mode of communication between the layers using the System.Console to exchange a JSON formatted request received via a single command line argument and returns a JSON formatted response (via Console.WriteLine)
@@ -47,9 +47,6 @@ Basic mode of communication between the layers using the System.Console to excha
 	
 Example:-
 
-'''
-MintySensorMonitor.exe {source:'MSM[JSON]EXAMPLE'}
-'''
 
 	
 	JSON Result:-
@@ -179,5 +176,5 @@ MintySensorMonitor.exe {source:'MSM[JSON]EXAMPLE'}
   
   
 	
-## License
+### License
 MSM is licensed under The [GNU General Public License version 3](https://www.gnu.org/licenses/gpl-3.0.en.html).
