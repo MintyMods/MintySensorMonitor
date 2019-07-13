@@ -171,6 +171,13 @@ MintySensorMonitor.exe {source:'MSM[JSON]EXAMPLE'}
 	// @todo ::  MSS:Java --(JNA)-->  C/C++ --(COM Interop)--> MSM:C#
 	
 	// @todo ::  MSS:Java --(TCP)-->  HWiNFO
+
+
+## Acknowledgments
+
+  * HWiNFO - Martin Malik for his help with the sensor integration [HWiNFO](http://hwinfo.com)
+  
+  
 	
 ## License
 Minty Sensor Monitor is licensed under The MIT License (MIT). Which means that you can use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software. But you always need to state that MintyMods is the original author of this template.
