@@ -33,22 +33,13 @@ Minty Sensor Server has been developed in JAVA is unable to easily consume this 
 
 ## For more information see the following projects:-
 
-	* Minty Sensor Server : [MSS](https://github.com/MintyMods/MintySensorServer)
-	* Minty Sensor Monitor : [MSM](https://github.com/MintyMods/MintySensorMonitor)
-	* MintySm2MintySSJniWrapper : [MSM2MSS](https://github.com/MintyMods/MintySm2MintySsJniWrapper)
+   * Minty Sensor Server : [MSS](https://github.com/MintyMods/MintySensorServer)
+   * Minty Sensor Monitor : [MSM](https://github.com/MintyMods/MintySensorMonitor)
+   * MintySm2MintySSJniWrapper : [MSM2MSS](https://github.com/MintyMods/MintySm2MintySsJniWrapper)
 
+### MSM (This Project) C# <--> C++ <--> Java 
 
-
-
-
-SENSORS <-?-> HWiNFO <-?-> MSM[C#:SHM] <--> MSS[JNI:JSON] <--> API[JAVA:REST/JSOM/HTML]
-
-This is done using C# <-JSON-> JNI <--> JAVA <--> HTTP(S) <--> HTML5
-
-
-
-	
-### MSM (This Project) Java --(Process Builder <-> EXE) --> C#
+SENSORS <-?-> HWiNFO <-SHM-> MSM[C#:JSON] <--> MSM2MSS[C++:JSON] <--> MSS[JNI:JSON] <--> API[JAVA:REST/JSON/HTML]
 
 ## MintySensorServer(MSS:Java) <json> ProcessBuilder <json> MintySensorMonitor(MSM:C#)
 Basic mode of communication between the layers using the System.Console to exchange a JSON formatted request received via a single command line argument and returns a JSON formatted response (via Console.WriteLine)
