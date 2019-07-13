@@ -118,20 +118,12 @@
     <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="log4net, Version=2.0.8.0, Culture=neutral, PublicKeyToken=669e0ddf0bb1aa2a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MintySm2MintySsJniWrapper\lib\log4net.dll</HintPath>
-    </Reference>
     <Reference Include="Microsoft.CSharp">
       <RequiredTargetFramework>4.0</RequiredTargetFramework>
     </Reference>
     <Reference Include="MintyServiceHWiNFO, Version=1.0.7099.1845, Culture=neutral, processorArchitecture=x86">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MintySm2MintySsJniWrapper\lib\MintyServiceHWiNFO.dll</HintPath>
-    </Reference>
-    <Reference Include="Newtonsoft.Json, Version=12.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-      <HintPath>..\MintySm2MintySsJniWrapper\lib\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\MintyServiceHWiNFO\bin\x64\Release\MintyServiceHWiNFO.dll</HintPath>
     </Reference>
     <Reference Include="System" />
   </ItemGroup>
@@ -171,6 +163,12 @@
       <ProductName>.NET Framework 3.5 SP1</ProductName>
       <Install>false</Install>
     </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\MSM2MSS\MintySm2MintySsJniWrapper.vcxproj">
+      <Project>{41a3d763-09e6-4e1a-afc4-6c2654574a50}</Project>
+      <Name>MintySm2MintySsJniWrapper</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

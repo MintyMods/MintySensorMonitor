@@ -27,124 +27,78 @@ This information can be utilised using 3rd party sofware such as:-
 The sister project [MSS - Minty Sensor Server](https://github.com/MintyMods/MintySS) requires integration between various 3rd party sensor information providers who mostly output this sensor information via native C# libraries or directly via Shared Memory access. 
 As MSS has been developed using JAVA it is difficult to consume this information directly so MSM provides a bridge between these native C# software components and JAVA via a simple JSON request / response model.
 
-
 ## For more information see the following projects:-
 * MSS : [Minty Sensor Server](https://github.com/MintyMods/MintySensorServer)
 * MSM : [Minty Sensor Monitor](https://github.com/MintyMods/MintySensorMonitor)
-* MSM2MSS : [Minty Sensor Monitor 2 Minty Sensor Server JNI Wrapper](https://github.com/MintyMods/MSM2MSS)
+* MSM2MSS : [Minty Sensor Monitor 2 Minty Sensor Server JNI Wrapper](https://github.com/MintyMods/MintySm2MintySsJniWrapper)
 
 
 
 ## This Project (MSM) C# <--> (MSM2MSS) C++ <--> (MSS) Java 
 
-SENSORS <-?-> HWiNFO <-SHM-> MSM[C#] <-JSON-> MSM2MSS[C++] <-JSON-> MSS[JNI] <-JSON-> API[JAVA:REST/JSON/HTML]
+ - **Full Project Stack:-**
+	- Raw Sensor Information 
+	- <--?:Sensor Information Providers:?-->
+	- <--*SHM::DLL*--> 
+	- **MsmServiceInterface** 
+	- <--*MSMRequest::MSMResponse*--> 
+	- **MSM**[C#] 
+	- <--*MSMRequest::MSMResponse*--> 
+	- **MSM2MSS**[C++] 
+	- <--*MSMRequest::MSMResponse*--> 
+	- **MSS**[JNI] 
+	- <--*MSMRequest::MSMResponse*--> 
+	- **API**[JAVA:REST/JSON]
+	- <--HTTP::HTML-->
 
-## MintySensorServer(MSS:Java) <json> ProcessBuilder <json> MintySensorMonitor(MSM:C#)
-Basic mode of communication between the layers using the System.Console to exchange a JSON formatted request received via a single command line argument and returns a JSON formatted response (via Console.WriteLine)
 
+## MSMRequest 
 	
-Example:-
+```
+{"debug":true} 
+```
 
+## MsmMonitorResponse 
 
-	
-	JSON Result:-
-
-{ 
-   "sensors":[ 
-      {  
-         "label":{  
-
-         },
-         "id":12345,
-         "instance":0,
-         "name":"EXAMPLE:CPU"
-      }
-   ],
-   "readings":[ 
-      {  
-         "label":{  
-
-         },
-         "id":12345,
-         "sensor_index":1,
-         "unit":"Volt(s)",
-         "value":100.0,
-         "min":0.0,
-         "max":0.0,
-         "avg":60.0
-      },
-      {  
-         "label":{  
-
-         },
-         "id":12345,
-         "sensor_index":1,
-         "unit":"Rpm",
-         "value":12345.098765,
-         "min":0.12312,
-         "max":0.0,
-         "avg":40.7345
-      }
-   ],
-   "exception":null,
-   "labels":[
-      "sensor.label"
-   ],
-   "type":"MsmMonitorResponse",
-   "source":"MSM[JSON]EXAMPLE",
-   "version":"1.0",
-   "debug":false,
-   "time_taken_ms":0
-}
-
-	Example:-
-	
-	* MintySensorMonitor.exe {source:'MSM[JSON]EXAMPLE',debug:true}
-	
-	Logging Output:
-
- INFO mintymods.MsmMonitorRequest -  ** Debug logging enabled **
- DEBUG mintymods.MsmServiceController - @SERVICE#MsmServiceExample
- DEBUG mintymods.MsmServiceExample - Request received @SOURCE#MSM[JSON]EXAMPLE
- DEBUG mintymods.MsmServiceExample - Cleaning up any used resources and shutting down...
- DEBUG mintymods.MintySenorMonitor - {"sensors":[{"label":{},"id":12345,"instance":0,"name":"EXAMPLE:CPU"}],"readings":[{"label":{},"id":12345,"sensor_index":1,"unit":"Volt(s)","value":100.0,"min":0.0,"max":0.0,"avg":60.0},{"label":{},"id":12345,"sensor_index":1,"unit":"Rpm","value":12345.098765,"min":0.12312,"max":0.0,"avg":40.7345}],"exception":null,"labels":["sensor.label"],"type":"MsmMonitorResponse","source":"MSM[JSON]EXAMPLE","version":"1.0","debug":false,"time_taken_ms":0}
-
-	JSON Result:-
-
+```
 {  
    "sensors":[  
       {  
          "label":{  
-
+            "value":"value",
+            "description":"description"
          },
          "id":12345,
-         "instance":0,
-         "name":"EXAMPLE:CPU"
+         "instance":1
       }
    ],
    "readings":[  
       {  
+         "type":2,
          "label":{  
-
+            "value":"CPU[1]VOLT",
+            "description":"Central Processor Voltage"
          },
          "id":12345,
          "sensor_index":1,
          "unit":"Volt(s)",
-         "value":100.0,
-         "min":0.0,
-         "max":0.0,
-         "avg":60.0
+         "value":1.154667,
+         "min":1.228763,
+         "max":1.354786,
+         "avg":1.286443
       },
       {  
+         "type":3,
          "label":{  
-
+            "value":"CPU[1]FAN",
+            "description":"Central Processor Fan Speed"
          },
          "id":12345,
          "sensor_index":1,
          "unit":"Rpm",
-         "value":12345.098765,
-         "min":0.12312,
-         "max":0.0,
+         "value":45.898765,
+         "min":0.0,
+         "max":305346.12312,
          "avg":40.7345
       }
    ],
@@ -156,17 +110,10 @@ Example:-
    "source":"MSM[JSON]EXAMPLE",
    "version":"1.0",
    "debug":false,
-   "time_taken_ms":0
+   "time_taken_ms":1
 }
-	
-	
-	* System.in/System.out (Comnmand Line Console) to interchange data between MSS(JAVA) and MSM(C#) via JSON formatted request/response messages. 
-	
-	
-	// @todo ::  MSS:Java --(JNA)-->  C/C++ --(COM Interop)--> MSM:C#
-	
-	// @todo ::  MSS:Java --(TCP)-->  HWiNFO
 
+```
 
 ## Acknowledgments
 
