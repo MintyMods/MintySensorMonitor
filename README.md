@@ -1,7 +1,7 @@
 # MSM - Minty Sensor Monitor 
 
-[MSM](https://github.com/MintyMods/MintySensorMonitor) has been developed as the backend for Minty Sensor Server. 
-MSM consumes requests for various hardware sensor information exposed by 3rd party hardware monitor components such as HWiNFO and formats these into a consumable [JSON](https://www.json.org/) response format.
+[MSM](https://github.com/MintyMods/MintySensorMonitor) has been developed as the backend for [Minty Sensor Server](https://github.com/MintyMods/MintySensorServer). 
+MSM consumes JSON requests for hardware sensor information exposed by 3rd party software monitoring components such as HWiNFO and formats this sensor data as a consumable [JSON](https://www.json.org/) response format.
 
 ## MSM Quest : Output a native C# library call as JSON response to MSS - Minty Sensor Server
 Your current installed hardware components such as:-
