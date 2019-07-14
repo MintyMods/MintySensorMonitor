@@ -110,7 +110,7 @@ As MSS has been developed using JAVA it is difficult to consume this information
    "source":"MSM[JSON]EXAMPLE",
    "version":"1.0",
    "debug":false,
-   "time_taken_ms":1
+   "time_taken":"00:00:00.0000015"
 }
 
 ```

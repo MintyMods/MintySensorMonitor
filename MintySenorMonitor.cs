@@ -17,31 +17,28 @@ namespace mintymods {
 		
 		public string getSensorInfoAsJSON() {
 			var timer = Stopwatch.StartNew();
-            log.Debug("@Timer started#" + timer);
-			var controller = new MsmServiceController();
-            log.Debug("@Created Service Controller#" + controller);
+            var controller = new MsmServiceController();
             MsmServiceInterface monitor = controller.getMonitorForRequest(request);
             log.Debug("@Created monitor#" + monitor);
             string json = "";
 			try {
 				response = monitor.poll();
-                log.Debug("@Monitor Polled Response#" + response);
-				timer.Stop();
-				response.time_taken_ms = timer.ElapsedMilliseconds;
-				json = Newtonsoft.Json.JsonConvert.SerializeObject(response);
+                timer.Stop();
+                response.time_taken = timer.Elapsed;
+                json = Newtonsoft.Json.JsonConvert.SerializeObject(response);
                 log.Debug("@JSON#" + json);
 			} catch (MsmException e) {
 				if (response.exception == null) {
 					response.exception = e;
 				}
-				timer.Stop();
-				response.time_taken_ms = timer.ElapsedMilliseconds;
-				json = Newtonsoft.Json.JsonConvert.SerializeObject(response);
+                timer.Stop();
+                response.time_taken = timer.Elapsed;
+                json = Newtonsoft.Json.JsonConvert.SerializeObject(response);
 			} finally {
-				monitor.dispose();
-			}
-		
-			if (request.debug) {
+                monitor.dispose();
+            }
+
+            if (request.debug) {
 				log.Debug(json);
 				Debug.WriteLine(json);
 			}

@@ -14,9 +14,9 @@ namespace mintymods {
 		public string source = "MSM[SERVICE]";
 		public string version = "0.5A";
 		public bool debug;
-		public long time_taken_ms;
+        public TimeSpan time_taken;
 
-		public MsmMonitorResponse() {
+        public MsmMonitorResponse() {
 
 			labels = new List<string>();
 			sensors = new List<MsmSensor>();
