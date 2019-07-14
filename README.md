@@ -114,7 +114,7 @@ As MSS has been developed using JAVA it is difficult to consume this information
 }
 
 ```
-[HWiNFO64 MsmMonitorResponse](docs/MSMReponseJsonHWiNFOExample.md)
+[HWiNFO64 MsmMonitorResponse](/docs/MSMReponseJsonHWiNFOExample.md)
 
 ## Acknowledgments
 
