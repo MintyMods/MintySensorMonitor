@@ -25,7 +25,7 @@ This information can be utilised using 3rd party sofware such as:-
 
 ## GOAL : Integrate available sensor information with MSS - Minty Sensor Server 
 The sister project [MSS - Minty Sensor Server](https://github.com/MintyMods/MintySS) requires integration between various 3rd party sensor information providers who mostly output this sensor information via native C# libraries or directly via Shared Memory access. 
-As MSS has been developed using JAVA it is difficult to consume this information directly so MSM provides a bridge between these native C# software components and JAVA via a simple JSON request / response model.
+As MSS has been developed using JAVA, it is very difficult to consume this information directly so MSM provides a bridge between these native C# software components and JAVA via a simple JSON [MSMRequest](https://github.com/MintyMods/MintySensorServer/blob/master/src/main/java/info/mintymods/msm/MsmMonitorRequest.java) / [MSMResponse](https://github.com/MintyMods/MintySensorServer/blob/master/src/main/java/info/mintymods/msm/MsmMonitorResponse.java) model.
 
 ## For more information see the following projects:-
 * MSS : [Minty Sensor Server](https://github.com/MintyMods/MintySensorServer)
