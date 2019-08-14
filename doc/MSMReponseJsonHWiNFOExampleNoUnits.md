@@ -1,167 +1,167 @@
-{  
-   "sensors":[  
-      {  
-         "label":{  
+{
+   "sensors":[
+      {
+         "label":{
             "value":"System: GIGABYTE Z270X-Gaming 7",
             "description":"Mobo"
          },
          "id":4026532609,
          "instance":0
       },
-      {  
-         "label":{  
+      {
+         "label":{
             "value":"CPU [#0]: Intel Core i7-7700K",
             "description":"CPU [#0]: Intel Core i7-7700K"
          },
          "id":4026532608,
          "instance":0
       },
-      {  
-         "label":{  
+      {
+         "label":{
             "value":"CPU [#0]: Intel Core i7-7700K: DTS",
             "description":"CPU [#0]: Intel Core i7-7700K: DTS"
          },
          "id":4026532864,
          "instance":0
       },
-      {  
-         "label":{  
+      {
+         "label":{
             "value":"CPU [#0]: Intel Core i7-7700K: Enhanced",
             "description":"CPU [#0]: Intel Core i7-7700K: Enhanced"
          },
          "id":4026542592,
          "instance":0
       },
-      {  
-         "label":{  
+      {
+         "label":{
             "value":"CPU [#0]: Intel Core i7-7700K: C-State Residency",
             "description":"CPU [#0]: Intel Core i7-7700K: C-State Residency"
          },
          "id":4026532610,
          "instance":0
       },
-      {  
-         "label":{  
+      {
+         "label":{
             "value":"Memory Timings",
             "description":"Memory Timings"
          },
          "id":4026532609,
          "instance":1
       },
-      {  
-         "label":{  
+      {
+         "label":{
             "value":"CPU [#0]: Intel Core i7-7700K: Performance Limit Reasons",
             "description":"CPU [#0]: Intel Core i7-7700K: Performance Limit Reasons"
          },
          "id":4026534144,
          "instance":0
       },
-      {  
-         "label":{  
+      {
+         "label":{
             "value":"GIGABYTE Z270X-Gaming 7 (ITE IT8686E)",
             "description":"GIGABYTE Z270X-Gaming 7 (ITE IT8686E)"
          },
          "id":4026566278,
          "instance":0
       },
-      {  
-         "label":{  
+      {
+         "label":{
             "value":"GIGABYTE Z270X-Gaming 7 (ITE IT8792E)",
             "description":"GIGABYTE Z270X-Gaming 7 (ITE IT8792E)"
          },
          "id":4026566451,
          "instance":1
       },
-      {  
-         "label":{  
+      {
+         "label":{
             "value":"DIMM Temperature Sensor",
             "description":"DIMM Temperature Sensor"
          },
          "id":4076863490,
          "instance":0
       },
-      {  
-         "label":{  
+      {
+         "label":{
             "value":"S.M.A.R.T.: OCZ-VERTEX460 (OCZ-8S8JCY65H2E6UHP9)",
             "description":"S.M.A.R.T.: OCZ-VERTEX460 (OCZ-8S8JCY65H2E6UHP9)"
          },
          "id":4026532096,
          "instance":0
       },
-      {  
-         "label":{  
+      {
+         "label":{
             "value":"S.M.A.R.T.: Samsung SSD 850 EVO 500GB (S21JNXAG819111Y)",
             "description":"S.M.A.R.T.: Samsung SSD 850 EVO 500GB (S21JNXAG819111Y)"
          },
          "id":4026532096,
          "instance":1
       },
-      {  
-         "label":{  
+      {
+         "label":{
             "value":"S.M.A.R.T.: Samsung SSD 960 EVO 250GB (S3ESNX0J517998V)",
             "description":"S.M.A.R.T.: Samsung SSD 960 EVO 250GB (S3ESNX0J517998V)"
          },
          "id":4026532096,
          "instance":2
       },
-      {  
-         "label":{  
+      {
+         "label":{
             "value":"S.M.A.R.T.: Samsung SSD 960 EVO 250GB (S3ESNX0J518212P)",
             "description":"S.M.A.R.T.: Samsung SSD 960 EVO 250GB (S3ESNX0J518212P)"
          },
          "id":4026532096,
          "instance":3
       },
-      {  
-         "label":{  
+      {
+         "label":{
             "value":"Drive: OCZ-VERTEX460 (OCZ-8S8JCY65H2E6UHP9)",
             "description":"Drive: OCZ-VERTEX460 (OCZ-8S8JCY65H2E6UHP9)"
          },
          "id":4026532097,
          "instance":0
       },
-      {  
-         "label":{  
+      {
+         "label":{
             "value":"Drive: Samsung SSD 850 EVO 500GB (S21JNXAG819111Y)",
             "description":"Drive: Samsung SSD 850 EVO 500GB (S21JNXAG819111Y)"
          },
          "id":4026532097,
          "instance":1
       },
-      {  
-         "label":{  
+      {
+         "label":{
             "value":"Drive: Intel Raid 0 Volume (Windows10)",
             "description":"Drive: Intel Raid 0 Volume (Windows10)"
          },
          "id":4026532097,
          "instance":2
       },
-      {  
-         "label":{  
+      {
+         "label":{
             "value":"GPU [#0]: NVIDIA GeForce RTX 2080 Ti: ",
             "description":"GPU [#0]: NVIDIA GeForce RTX 2080 Ti: "
          },
          "id":3758104576,
          "instance":0
       },
-      {  
-         "label":{  
+      {
+         "label":{
             "value":"Network: Intel Ethernet Connection I219-V",
             "description":"Network: Intel Ethernet Connection I219-V"
          },
          "id":4026591744,
          "instance":0
       },
-      {  
-         "label":{  
+      {
+         "label":{
             "value":"Network: Qualcomm/Atheros E2500 PCI-E Gigabit Ethernet Controller",
             "description":"Network: Qualcomm/Atheros E2500 PCI-E Gigabit Ethernet Controller"
          },
          "id":4026591744,
          "instance":1
       },
-      {  
-         "label":{  
+      {
+         "label":{
             "value":"Windows Hardware Errors (WHEA)",
             "description":"Windows Hardware Errors (WHEA)"
          },
@@ -169,10 +169,10 @@
          "instance":0
       }
    ],
-   "readings":[  
-      {  
+   "readings":[
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Virtual Memory Commited",
             "description":"Virtual Memory Commited"
          },
@@ -184,9 +184,9 @@
          "max":10834.0,
          "avg":8127.4886948734948
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Virtual Memory Available",
             "description":"Virtual Memory Available"
          },
@@ -198,9 +198,9 @@
          "max":4855.0,
          "avg":2183.4200805910004
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Virtual Memory Load",
             "description":"Virtual Memory Load"
          },
@@ -212,9 +212,9 @@
          "max":89.9,
          "avg":78.414204163868249
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Physical Memory Used",
             "description":"Physical Memory Used"
          },
@@ -226,9 +226,9 @@
          "max":6649.0,
          "avg":4659.2593463174371
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Physical Memory Available",
             "description":"Physical Memory Available"
          },
@@ -240,9 +240,9 @@
          "max":5100.0,
          "avg":3488.0417506156155
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Physical Memory Load",
             "description":"Physical Memory Load"
          },
@@ -254,9 +254,9 @@
          "max":81.6,
          "avg":57.138347884486294
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Page File Usage",
             "description":"Page File Usage"
          },
@@ -268,9 +268,9 @@
          "max":7.1276363508327165,
          "avg":3.9685648697750344
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"Core #0 VID",
             "description":"Core #0 vids man"
          },
@@ -282,9 +282,9 @@
          "max":1.2943115234375,
          "avg":0.74302194773390229
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"Core #1 VID",
             "description":"Core #1 VID"
          },
@@ -296,9 +296,9 @@
          "max":1.2979736328125,
          "avg":0.744212153776128
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"Core #2 VID",
             "description":"Core #2 VID"
          },
@@ -310,9 +310,9 @@
          "max":1.2979736328125,
          "avg":0.74387734171685793
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"Core #3 VID",
             "description":"Core #3 VID"
          },
@@ -324,9 +324,9 @@
          "max":1.2930908203125,
          "avg":0.74424442712268235
       },
-      {  
+      {
          "type":6,
-         "label":{  
+         "label":{
             "value":"Core #0 Clock",
             "description":"Core #0 Clock"
          },
@@ -338,9 +338,9 @@
          "max":4504.41,
          "avg":1357.917695657045
       },
-      {  
+      {
          "type":6,
-         "label":{  
+         "label":{
             "value":"Core #1 Clock",
             "description":"Core #1 Clock"
          },
@@ -352,9 +352,9 @@
          "max":4504.41,
          "avg":1365.7968768748603
       },
-      {  
+      {
          "type":6,
-         "label":{  
+         "label":{
             "value":"Core #2 Clock",
             "description":"Core #2 Clock"
          },
@@ -366,9 +366,9 @@
          "max":4504.41,
          "avg":1361.6116522274403
       },
-      {  
+      {
          "type":6,
-         "label":{  
+         "label":{
             "value":"Core #3 Clock",
             "description":"Core #3 Clock"
          },
@@ -380,9 +380,9 @@
          "max":4504.41,
          "avg":1365.167988918733
       },
-      {  
+      {
          "type":6,
-         "label":{  
+         "label":{
             "value":"Bus Clock",
             "description":"Bus Clock"
          },
@@ -394,9 +394,9 @@
          "max":100.122,
          "avg":99.9946367808368
       },
-      {  
+      {
          "type":6,
-         "label":{  
+         "label":{
             "value":"Ring/LLC Clock",
             "description":"Ring/LLC Clock"
          },
@@ -408,9 +408,9 @@
          "max":4204.116,
          "avg":1280.1969791806564
       },
-      {  
+      {
          "type":6,
-         "label":{  
+         "label":{
             "value":"System Agent Clock",
             "description":"System Agent Clock"
          },
@@ -422,9 +422,9 @@
          "max":1001.22,
          "avg":999.94636780836879
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Core #0 Thread #0 Usage",
             "description":"Core #0 Thread #0 Usage"
          },
@@ -436,9 +436,9 @@
          "max":92.0,
          "avg":11.846787553167665
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Core #0 Thread #1 Usage",
             "description":"Core #0 Thread #1 Usage"
          },
@@ -450,9 +450,9 @@
          "max":90.7,
          "avg":6.01812178195655
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Core #1 Thread #0 Usage",
             "description":"Core #1 Thread #0 Usage"
          },
@@ -464,9 +464,9 @@
          "max":96.2,
          "avg":12.201634206402465
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Core #1 Thread #1 Usage",
             "description":"Core #1 Thread #1 Usage"
          },
@@ -478,9 +478,9 @@
          "max":93.2,
          "avg":10.292970673830325
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Core #2 Thread #0 Usage",
             "description":"Core #2 Thread #0 Usage"
          },
@@ -492,9 +492,9 @@
          "max":90.1,
          "avg":9.0830087306917129
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Core #2 Thread #1 Usage",
             "description":"Core #2 Thread #1 Usage"
          },
@@ -506,9 +506,9 @@
          "max":100.0,
          "avg":10.304275800313354
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Core #3 Thread #0 Usage",
             "description":"Core #3 Thread #0 Usage"
          },
@@ -520,9 +520,9 @@
          "max":90.1,
          "avg":10.644448175509341
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Core #3 Thread #1 Usage",
             "description":"Core #3 Thread #1 Usage"
          },
@@ -534,9 +534,9 @@
          "max":94.7,
          "avg":9.67320349227666
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Max CPU/Thread Usage",
             "description":"Max CPU/Thread Usage"
          },
@@ -548,9 +548,9 @@
          "max":100.0,
          "avg":17.408148645623431
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Total CPU Usage",
             "description":"Total CPU Usage"
          },
@@ -562,9 +562,9 @@
          "max":90.499999999999986,
          "avg":10.00805630176856
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"On-Demand Clock Modulation",
             "description":"On-Demand Clock Modulation"
          },
@@ -576,9 +576,9 @@
          "max":100.0,
          "avg":100.00000000000001
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Core #0 Ratio",
             "description":"Core #0 Ratio"
          },
@@ -590,9 +590,9 @@
          "max":45.0,
          "avg":13.57991940899929
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Core #1 Ratio",
             "description":"Core #1 Ratio"
          },
@@ -604,9 +604,9 @@
          "max":45.0,
          "avg":13.658719498544853
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Core #2 Ratio",
             "description":"Core #2 Ratio"
          },
@@ -618,9 +618,9 @@
          "max":45.0,
          "avg":13.616856950973787
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Core #3 Ratio",
             "description":"Core #3 Ratio"
          },
@@ -632,9 +632,9 @@
          "max":45.0,
          "avg":13.652451309603707
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Uncore Ratio",
             "description":"Uncore Ratio"
          },
@@ -646,9 +646,9 @@
          "max":42.0,
          "avg":12.802663980299981
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"Core #0",
             "description":"Core #0"
          },
@@ -660,9 +660,9 @@
          "max":66.0,
          "avg":33.139691067830874
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"Core #1",
             "description":"Core #1"
          },
@@ -674,9 +674,9 @@
          "max":66.0,
          "avg":33.723863890754451
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"Core #2",
             "description":"Core #2"
          },
@@ -688,9 +688,9 @@
          "max":70.0,
          "avg":34.307700917841792
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"Core #3",
             "description":"Core #3"
          },
@@ -702,9 +702,9 @@
          "max":67.0,
          "avg":33.009738079248
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"Core #0 Distance to TjMAX",
             "description":"Core #0 Distance to TjMAX"
          },
@@ -716,9 +716,9 @@
          "max":72.0,
          "avg":66.860308932168877
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"Core #1 Distance to TjMAX",
             "description":"Core #1 Distance to TjMAX"
          },
@@ -730,9 +730,9 @@
          "max":73.0,
          "avg":66.276136109245442
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"Core #2 Distance to TjMAX",
             "description":"Core #2 Distance to TjMAX"
          },
@@ -744,9 +744,9 @@
          "max":71.0,
          "avg":65.692299082157774
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"Core #3 Distance to TjMAX",
             "description":"Core #3 Distance to TjMAX"
          },
@@ -758,9 +758,9 @@
          "max":74.0,
          "avg":66.990261920751522
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"CPU Package",
             "description":"CPU Package"
          },
@@ -772,9 +772,9 @@
          "max":69.0,
          "avg":34.916274904857787
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"Core Max",
             "description":"Core Max"
          },
@@ -786,9 +786,9 @@
          "max":70.0,
          "avg":34.915715245130983
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Core #0 Thermal Throttling",
             "description":"Core #0 Thermal Throttling"
          },
@@ -800,9 +800,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Core #1 Thermal Throttling",
             "description":"Core #1 Thermal Throttling"
          },
@@ -814,9 +814,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Core #2 Thermal Throttling",
             "description":"Core #2 Thermal Throttling"
          },
@@ -828,9 +828,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Core #3 Thermal Throttling",
             "description":"Core #3 Thermal Throttling"
          },
@@ -842,9 +842,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Core #0 Critical Temperature",
             "description":"Core #0 Critical Temperature"
          },
@@ -856,9 +856,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Core #1 Critical Temperature",
             "description":"Core #1 Critical Temperature"
          },
@@ -870,9 +870,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Core #2 Critical Temperature",
             "description":"Core #2 Critical Temperature"
          },
@@ -884,9 +884,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Core #3 Critical Temperature",
             "description":"Core #3 Critical Temperature"
          },
@@ -898,9 +898,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Core #0 Power Limit Exceeded",
             "description":"Core #0 Power Limit Exceeded"
          },
@@ -912,9 +912,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Core #1 Power Limit Exceeded",
             "description":"Core #1 Power Limit Exceeded"
          },
@@ -926,9 +926,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Core #2 Power Limit Exceeded",
             "description":"Core #2 Power Limit Exceeded"
          },
@@ -940,9 +940,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Core #3 Power Limit Exceeded",
             "description":"Core #3 Power Limit Exceeded"
          },
@@ -954,9 +954,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Package/Ring Thermal Throttling",
             "description":"Package/Ring Thermal Throttling"
          },
@@ -968,9 +968,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Package/Ring Critical Temperature",
             "description":"Package/Ring Critical Temperature"
          },
@@ -982,9 +982,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Package/Ring Power Limit Exceeded",
             "description":"Package/Ring Power Limit Exceeded"
          },
@@ -996,9 +996,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"CPU Package",
             "description":"CPU Package"
          },
@@ -1010,9 +1010,9 @@
          "max":69.0,
          "avg":35.142713230355952
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"CPU IA Cores",
             "description":"CPU IA Cores"
          },
@@ -1024,9 +1024,9 @@
          "max":69.0,
          "avg":35.125587642713114
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"CPU GT Cores (Graphics)",
             "description":"CPU GT Cores (Graphics)"
          },
@@ -1038,9 +1038,9 @@
          "max":41.0,
          "avg":33.090105216028761
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"IA Voltage Offset",
             "description":"IA Voltage Offset"
          },
@@ -1052,9 +1052,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"GT (Slice) Voltage Offset",
             "description":"GT (Slice) Voltage Offset"
          },
@@ -1066,9 +1066,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"CLR (CBo/LLC/Ring) Voltage Offset",
             "description":"CLR (CBo/LLC/Ring) Voltage Offset"
          },
@@ -1080,9 +1080,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"GT (Unslice) Voltage Offset",
             "description":"GT (Unslice) Voltage Offset"
          },
@@ -1094,9 +1094,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"Uncore/SA Voltage Offset",
             "description":"Uncore/SA Voltage Offset"
          },
@@ -1108,9 +1108,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":5,
-         "label":{  
+         "label":{
             "value":"CPU Package Power",
             "description":"CPU Package Power"
          },
@@ -1122,9 +1122,9 @@
          "max":70.618958078141176,
          "avg":15.111807258810037
       },
-      {  
+      {
          "type":5,
-         "label":{  
+         "label":{
             "value":"IA Cores Power",
             "description":"IA Cores Power"
          },
@@ -1136,9 +1136,9 @@
          "max":59.494552936371626,
          "avg":4.2434327077167007
       },
-      {  
+      {
          "type":5,
-         "label":{  
+         "label":{
             "value":"Total DRAM Power",
             "description":"Total DRAM Power"
          },
@@ -1150,9 +1150,9 @@
          "max":1.6814463349763791,
          "avg":0.34972690730292566
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"IA OC Ratio Limit",
             "description":"IA OC Ratio Limit"
          },
@@ -1164,9 +1164,9 @@
          "max":45.0,
          "avg":45.000000000000135
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"GT (Slice) OC Ratio Limit",
             "description":"GT (Slice) OC Ratio Limit"
          },
@@ -1178,9 +1178,9 @@
          "max":60.0,
          "avg":60.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"CLR (CBo/LLC/Ring) OC Ratio Limit",
             "description":"CLR (CBo/LLC/Ring) OC Ratio Limit"
          },
@@ -1192,9 +1192,9 @@
          "max":42.0,
          "avg":41.999999999999979
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Core #0 Thread 0 C0 Residency",
             "description":"Core #0 Thread 0 C0 Residency"
          },
@@ -1206,9 +1206,9 @@
          "max":90.827488482089578,
          "avg":20.037075253527533
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Core #0 Thread 1 C0 Residency",
             "description":"Core #0 Thread 1 C0 Residency"
          },
@@ -1220,9 +1220,9 @@
          "max":90.979967940603657,
          "avg":11.00828536597772
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Core #1 Thread 0 C0 Residency",
             "description":"Core #1 Thread 0 C0 Residency"
          },
@@ -1234,9 +1234,9 @@
          "max":92.918524423243,
          "avg":18.96876238775311
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Core #1 Thread 1 C0 Residency",
             "description":"Core #1 Thread 1 C0 Residency"
          },
@@ -1248,9 +1248,9 @@
          "max":94.315338581909586,
          "avg":14.969531788840076
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Core #2 Thread 0 C0 Residency",
             "description":"Core #2 Thread 0 C0 Residency"
          },
@@ -1262,9 +1262,9 @@
          "max":89.6037471390336,
          "avg":17.775235656951825
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Core #2 Thread 1 C0 Residency",
             "description":"Core #2 Thread 1 C0 Residency"
          },
@@ -1276,9 +1276,9 @@
          "max":92.3235453652855,
          "avg":14.231887520444463
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Core #3 Thread 0 C0 Residency",
             "description":"Core #3 Thread 0 C0 Residency"
          },
@@ -1290,9 +1290,9 @@
          "max":92.05129640516715,
          "avg":17.082562045438323
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Core #3 Thread 1 C0 Residency",
             "description":"Core #3 Thread 1 C0 Residency"
          },
@@ -1304,9 +1304,9 @@
          "max":92.551462354054067,
          "avg":14.882565883573029
       },
-      {  
+      {
          "type":6,
-         "label":{  
+         "label":{
             "value":"Memory Clock",
             "description":"Memory Clock"
          },
@@ -1318,9 +1318,9 @@
          "max":1067.9679999999998,
          "avg":1066.609458995594
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Memory Clock Ratio",
             "description":"Memory Clock Ratio"
          },
@@ -1332,9 +1332,9 @@
          "max":10.666666666666666,
          "avg":10.666666666666723
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Tcas",
             "description":"Tcas"
          },
@@ -1346,9 +1346,9 @@
          "max":15.0,
          "avg":15.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Trcd",
             "description":"Trcd"
          },
@@ -1360,9 +1360,9 @@
          "max":15.0,
          "avg":15.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Trp",
             "description":"Trp"
          },
@@ -1374,9 +1374,9 @@
          "max":15.0,
          "avg":15.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Tras",
             "description":"Tras"
          },
@@ -1388,9 +1388,9 @@
          "max":36.0,
          "avg":36.000000000000007
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Trfc",
             "description":"Trfc"
          },
@@ -1402,9 +1402,9 @@
          "max":374.0,
          "avg":373.99999999999989
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Command Rate",
             "description":"Command Rate"
          },
@@ -1416,9 +1416,9 @@
          "max":2.0,
          "avg":2.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"IA: PROCHOT",
             "description":"IA: PROCHOT"
          },
@@ -1430,9 +1430,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"IA: Thermal Event",
             "description":"IA: Thermal Event"
          },
@@ -1444,9 +1444,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"IA: DDR RAPL",
             "description":"IA: DDR RAPL"
          },
@@ -1458,9 +1458,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"IA: PCS (PECI)",
             "description":"IA: PCS (PECI)"
          },
@@ -1472,9 +1472,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"IA: Residency State Regulation",
             "description":"IA: Residency State Regulation"
          },
@@ -1486,9 +1486,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"IA: Running Average Thermal Limit",
             "description":"IA: Running Average Thermal Limit"
          },
@@ -1500,9 +1500,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"IA: VR Thermal Alert",
             "description":"IA: VR Thermal Alert"
          },
@@ -1514,9 +1514,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"IA: VR TDC",
             "description":"IA: VR TDC"
          },
@@ -1528,9 +1528,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"IA: Electrical Design Point/Other (ICCmax,PL4,SVID,DDR RAPL)",
             "description":"IA: Electrical Design Point/Other (ICCmax,PL4,SVID,DDR RAPL)"
          },
@@ -1542,9 +1542,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"IA: Package-Level RAPL/PBM PL1",
             "description":"IA: Package-Level RAPL/PBM PL1"
          },
@@ -1556,9 +1556,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"IA: Package-Level RAPL/PBM PL2,PL3",
             "description":"IA: Package-Level RAPL/PBM PL2,PL3"
          },
@@ -1570,9 +1570,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"IA: Max Turbo Limit",
             "description":"IA: Max Turbo Limit"
          },
@@ -1584,9 +1584,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"IA: Turbo Attenuation (MCT)",
             "description":"IA: Turbo Attenuation (MCT)"
          },
@@ -1598,9 +1598,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"GT: Thermal Event",
             "description":"GT: Thermal Event"
          },
@@ -1612,9 +1612,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"GT: DDR RAPL",
             "description":"GT: DDR RAPL"
          },
@@ -1626,9 +1626,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"GT: Residency State Regulation",
             "description":"GT: Residency State Regulation"
          },
@@ -1640,9 +1640,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"GT: Running Average Thermal Limit",
             "description":"GT: Running Average Thermal Limit"
          },
@@ -1654,9 +1654,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"GT: VR Thermal Alert",
             "description":"GT: VR Thermal Alert"
          },
@@ -1668,9 +1668,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"GT: VR TDC",
             "description":"GT: VR TDC"
          },
@@ -1682,9 +1682,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"GT: Max VR Voltage, ICCmax, PL4",
             "description":"GT: Max VR Voltage, ICCmax, PL4"
          },
@@ -1696,9 +1696,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"GT: Domain-Level PBM PLGT",
             "description":"GT: Domain-Level PBM PLGT"
          },
@@ -1710,9 +1710,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"GT: Package-Level RAPL/PBM PL1",
             "description":"GT: Package-Level RAPL/PBM PL1"
          },
@@ -1724,9 +1724,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"GT: Package-Level RAPL/PBM PL2,PL3",
             "description":"GT: Package-Level RAPL/PBM PL2,PL3"
          },
@@ -1738,9 +1738,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"GT: Inefficient Operation",
             "description":"GT: Inefficient Operation"
          },
@@ -1752,9 +1752,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"GT: Fuses limit",
             "description":"GT: Fuses limit"
          },
@@ -1766,9 +1766,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"RING: Residency State Regulation",
             "description":"RING: Residency State Regulation"
          },
@@ -1780,9 +1780,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"RING: VR Thermal Alert",
             "description":"RING: VR Thermal Alert"
          },
@@ -1794,9 +1794,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"RING: VR TDC",
             "description":"RING: VR TDC"
          },
@@ -1808,9 +1808,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"RING: Max VR Voltage, ICCmax, PL4",
             "description":"RING: Max VR Voltage, ICCmax, PL4"
          },
@@ -1822,9 +1822,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"RING: Package-Level RAPL/PBM PL1",
             "description":"RING: Package-Level RAPL/PBM PL1"
          },
@@ -1836,9 +1836,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"RING: Package-Level RAPL/PBM PL2,PL3",
             "description":"RING: Package-Level RAPL/PBM PL2,PL3"
          },
@@ -1850,9 +1850,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"System1",
             "description":"System1"
          },
@@ -1864,9 +1864,9 @@
          "max":39.0,
          "avg":37.814192970673886
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"PCH",
             "description":"PCH"
          },
@@ -1878,9 +1878,9 @@
          "max":45.0,
          "avg":43.518580702932574
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"PCIEX16",
             "description":"PCIEX16"
          },
@@ -1892,9 +1892,9 @@
          "max":34.0,
          "avg":32.703044548914342
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"VRM MOS",
             "description":"VRM MOS"
          },
@@ -1906,9 +1906,9 @@
          "max":38.0,
          "avg":31.231027535258562
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"EC_TEMP1/System2",
             "description":"EC_TEMP1/System2"
          },
@@ -1920,9 +1920,9 @@
          "max":28.0,
          "avg":26.960488023281862
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"Vcore",
             "description":"Vcore"
          },
@@ -1934,9 +1934,9 @@
          "max":1.332,
          "avg":0.75410208193418193
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"+3.3V",
             "description":"+3.3V"
          },
@@ -1948,9 +1948,9 @@
          "max":3.3243840000000002,
          "avg":3.3224703183344437
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"+12V",
             "description":"+12V"
          },
@@ -1962,9 +1962,9 @@
          "max":12.168,
          "avg":12.167999999999916
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"+5V",
             "description":"+5V"
          },
@@ -1976,9 +1976,9 @@
          "max":4.92,
          "avg":4.9054969778374948
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"VCCSA",
             "description":"VCCSA"
          },
@@ -1990,9 +1990,9 @@
          "max":1.08,
          "avg":1.0635513767629226
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"DDR",
             "description":"DDR"
          },
@@ -2004,9 +2004,9 @@
          "max":1.26,
          "avg":1.2509670920080571
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"3VSB",
             "description":"3VSB"
          },
@@ -2018,9 +2018,9 @@
          "max":3.408,
          "avg":3.3935661517797233
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"VBAT",
             "description":"VBAT"
          },
@@ -2032,9 +2032,9 @@
          "max":3.24,
          "avg":3.239999999999998
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"AVCC3",
             "description":"AVCC3"
          },
@@ -2046,9 +2046,9 @@
          "max":3.072,
          "avg":3.0720000000000058
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Chassis Intrusion",
             "description":"Chassis Intrusion"
          },
@@ -2060,9 +2060,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"PCIEX8",
             "description":"PCIEX8"
          },
@@ -2074,9 +2074,9 @@
          "max":37.0,
          "avg":36.335236176404841
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"System2",
             "description":"System2"
          },
@@ -2088,9 +2088,9 @@
          "max":40.0,
          "avg":38.444817550928825
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"Vcore",
             "description":"Vcore"
          },
@@ -2102,9 +2102,9 @@
          "max":1.287,
          "avg":0.74002272218490794
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"DDR VTT",
             "description":"DDR VTT"
          },
@@ -2116,9 +2116,9 @@
          "max":0.627,
          "avg":0.61634598164316323
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"PCH Core",
             "description":"PCH Core"
          },
@@ -2130,9 +2130,9 @@
          "max":1.045,
          "avg":1.0443585180210397
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"VIN3",
             "description":"VIN3"
          },
@@ -2144,9 +2144,9 @@
          "max":1.6829999999999998,
          "avg":1.6827993060219388
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"VCCIO",
             "description":"VCCIO"
          },
@@ -2158,9 +2158,9 @@
          "max":0.946,
          "avg":0.94595444369823034
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"DDR VPP",
             "description":"DDR VPP"
          },
@@ -2172,9 +2172,9 @@
          "max":2.5031820000000002,
          "avg":2.503159666330864
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"3VSB",
             "description":"3VSB"
          },
@@ -2186,9 +2186,9 @@
          "max":3.3659999999999997,
          "avg":3.345531676740523
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"VBAT",
             "description":"VBAT"
          },
@@ -2200,9 +2200,9 @@
          "max":3.3,
          "avg":3.2999999999999989
       },
-      {  
+      {
          "type":3,
-         "label":{  
+         "label":{
             "value":"HPWR Pump",
             "description":"HPWR Pump"
          },
@@ -2214,9 +2214,9 @@
          "max":1562.0,
          "avg":750.84877994179192
       },
-      {  
+      {
          "type":3,
-         "label":{  
+         "label":{
             "value":"System 4",
             "description":"System 4"
          },
@@ -2228,9 +2228,9 @@
          "max":890.0,
          "avg":860.56480859636292
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Chassis Intrusion",
             "description":"Chassis Intrusion"
          },
@@ -2242,9 +2242,9 @@
          "max":16.0,
          "avg":16.0
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"DIMM[0] Temperature",
             "description":"DIMM[0] Temperature"
          },
@@ -2256,9 +2256,9 @@
          "max":35.5,
          "avg":34.404857846429607
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Drive Remaining Life",
             "description":"Drive Remaining Life"
          },
@@ -2270,9 +2270,9 @@
          "max":92.0,
          "avg":91.999999999999844
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Drive Failure",
             "description":"Drive Failure"
          },
@@ -2284,9 +2284,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Drive Warning",
             "description":"Drive Warning"
          },
@@ -2298,9 +2298,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Total Host Writes",
             "description":"Total Host Writes"
          },
@@ -2312,9 +2312,9 @@
          "max":40445.0,
          "avg":40444.999999999833
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Total NAND Writes",
             "description":"Total NAND Writes"
          },
@@ -2326,9 +2326,9 @@
          "max":22736.0,
          "avg":22735.999999999858
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Total Host Reads",
             "description":"Total Host Reads"
          },
@@ -2340,9 +2340,9 @@
          "max":22700.0,
          "avg":22700.000000000062
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"Drive Airflow Temperature",
             "description":"Drive Airflow Temperature"
          },
@@ -2354,9 +2354,9 @@
          "max":33.0,
          "avg":28.55327960599945
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Drive Remaining Life",
             "description":"Drive Remaining Life"
          },
@@ -2368,9 +2368,9 @@
          "max":91.0,
          "avg":91.000000000000256
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Drive Failure",
             "description":"Drive Failure"
          },
@@ -2382,9 +2382,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Drive Warning",
             "description":"Drive Warning"
          },
@@ -2396,9 +2396,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Total Host Writes",
             "description":"Total Host Writes"
          },
@@ -2410,9 +2410,9 @@
          "max":80523.0,
          "avg":80522.99999999936
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"Drive Temperature",
             "description":"Drive Temperature"
          },
@@ -2424,9 +2424,9 @@
          "max":39.0,
          "avg":36.132415491381181
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"Drive Temperature 2",
             "description":"Drive Temperature 2"
          },
@@ -2438,9 +2438,9 @@
          "max":51.0,
          "avg":40.015446608462
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Drive Remaining Life",
             "description":"Drive Remaining Life"
          },
@@ -2452,9 +2452,9 @@
          "max":97.0,
          "avg":96.999999999999815
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Drive Failure",
             "description":"Drive Failure"
          },
@@ -2466,9 +2466,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Drive Warning",
             "description":"Drive Warning"
          },
@@ -2480,9 +2480,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Total Host Writes",
             "description":"Total Host Writes"
          },
@@ -2494,9 +2494,9 @@
          "max":9062.0,
          "avg":9060.476382359433
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Total Host Reads",
             "description":"Total Host Reads"
          },
@@ -2508,9 +2508,9 @@
          "max":12894.0,
          "avg":12891.016453996095
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"Drive Temperature",
             "description":"Drive Temperature"
          },
@@ -2522,9 +2522,9 @@
          "max":38.0,
          "avg":35.042646071189012
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"Drive Temperature 2",
             "description":"Drive Temperature 2"
          },
@@ -2536,9 +2536,9 @@
          "max":50.0,
          "avg":38.582158047906844
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Drive Remaining Life",
             "description":"Drive Remaining Life"
          },
@@ -2550,9 +2550,9 @@
          "max":97.0,
          "avg":96.999999999999815
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Drive Failure",
             "description":"Drive Failure"
          },
@@ -2564,9 +2564,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Drive Warning",
             "description":"Drive Warning"
          },
@@ -2578,9 +2578,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Total Host Writes",
             "description":"Total Host Writes"
          },
@@ -2592,9 +2592,9 @@
          "max":9110.0,
          "avg":9108.3263935527521
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Total Host Reads",
             "description":"Total Host Reads"
          },
@@ -2606,9 +2606,9 @@
          "max":12894.0,
          "avg":12891.254197447966
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Read Activity",
             "description":"Read Activity"
          },
@@ -2620,9 +2620,9 @@
          "max":0.023,
          "avg":6.9397806133870635E-06
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Write Activity",
             "description":"Write Activity"
          },
@@ -2634,9 +2634,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Total Activity",
             "description":"Total Activity"
          },
@@ -2648,9 +2648,9 @@
          "max":0.023,
          "avg":6.9397806133870635E-06
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Read Rate",
             "description":"Read Rate"
          },
@@ -2662,9 +2662,9 @@
          "max":0.003,
          "avg":7.8352361764047476E-07
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Write Rate",
             "description":"Write Rate"
          },
@@ -2676,9 +2676,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Read Total",
             "description":"Read Total"
          },
@@ -2690,9 +2690,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Write Total",
             "description":"Write Total"
          },
@@ -2704,9 +2704,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Read Activity",
             "description":"Read Activity"
          },
@@ -2718,9 +2718,9 @@
          "max":32.033,
          "avg":0.066402507275576311
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Write Activity",
             "description":"Write Activity"
          },
@@ -2732,9 +2732,9 @@
          "max":19.959,
          "avg":0.01277759122453547
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Total Activity",
             "description":"Total Activity"
          },
@@ -2746,9 +2746,9 @@
          "max":32.037,
          "avg":0.079184351914036388
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Read Rate",
             "description":"Read Rate"
          },
@@ -2760,9 +2760,9 @@
          "max":24.852,
          "avg":0.046742892321468665
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Write Rate",
             "description":"Write Rate"
          },
@@ -2774,9 +2774,9 @@
          "max":9.907,
          "avg":0.00686288336691291
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Read Total",
             "description":"Read Total"
          },
@@ -2788,9 +2788,9 @@
          "max":877.0,
          "avg":415.99764942914771
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Write Total",
             "description":"Write Total"
          },
@@ -2802,9 +2802,9 @@
          "max":123.0,
          "avg":13.606335348108271
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Read Activity",
             "description":"Read Activity"
          },
@@ -2816,9 +2816,9 @@
          "max":100.0,
          "avg":0.69469330646966709
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Write Activity",
             "description":"Write Activity"
          },
@@ -2830,9 +2830,9 @@
          "max":96.364,
          "avg":0.282923886277142
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"Total Activity",
             "description":"Total Activity"
          },
@@ -2844,9 +2844,9 @@
          "max":100.0,
          "avg":0.97131161853593362
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Read Rate",
             "description":"Read Rate"
          },
@@ -2858,9 +2858,9 @@
          "max":252.221,
          "avg":0.59408450861875872
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Write Rate",
             "description":"Write Rate"
          },
@@ -2872,9 +2872,9 @@
          "max":150.363,
          "avg":0.33263331094694387
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Read Total",
             "description":"Read Total"
          },
@@ -2886,9 +2886,9 @@
          "max":15148.0,
          "avg":10538.122565480176
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Write Total",
             "description":"Write Total"
          },
@@ -2900,9 +2900,9 @@
          "max":6907.0,
          "avg":4186.1963286321834
       },
-      {  
+      {
          "type":1,
-         "label":{  
+         "label":{
             "value":"GPU Temperature",
             "description":"GPU Temperature"
          },
@@ -2914,9 +2914,9 @@
          "max":32.0,
          "avg":28.650884262368315
       },
-      {  
+      {
          "type":2,
-         "label":{  
+         "label":{
             "value":"GPU Core Voltage",
             "description":"GPU Core Voltage"
          },
@@ -2928,9 +2928,9 @@
          "max":0.725,
          "avg":0.725
       },
-      {  
+      {
          "type":3,
-         "label":{  
+         "label":{
             "value":"GPU Fan0",
             "description":"GPU Fan0"
          },
@@ -2942,9 +2942,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":3,
-         "label":{  
+         "label":{
             "value":"GPU Fan1",
             "description":"GPU Fan1"
          },
@@ -2956,9 +2956,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":5,
-         "label":{  
+         "label":{
             "value":"GPU Power",
             "description":"GPU Power"
          },
@@ -2970,9 +2970,9 @@
          "max":72.963,
          "avg":26.198573987015806
       },
-      {  
+      {
          "type":6,
-         "label":{  
+         "label":{
             "value":"GPU Clock",
             "description":"GPU Clock"
          },
@@ -2984,9 +2984,9 @@
          "max":1350.0,
          "avg":324.39053055742067
       },
-      {  
+      {
          "type":6,
-         "label":{  
+         "label":{
             "value":"GPU Memory Clock",
             "description":"GPU Memory Clock"
          },
@@ -2998,9 +2998,9 @@
          "max":7069.972,
          "avg":533.34063263934991
       },
-      {  
+      {
          "type":6,
-         "label":{  
+         "label":{
             "value":"GPU Video Clock",
             "description":"GPU Video Clock"
          },
@@ -3012,9 +3012,9 @@
          "max":1245.0,
          "avg":553.56111484217786
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"GPU Core Load",
             "description":"GPU Core Load"
          },
@@ -3026,9 +3026,9 @@
          "max":41.0,
          "avg":5.3230355943586192
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"GPU Memory Controller Load",
             "description":"GPU Memory Controller Load"
          },
@@ -3040,9 +3040,9 @@
          "max":21.0,
          "avg":4.8942243116185287
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"GPU Video Engine Load",
             "description":"GPU Video Engine Load"
          },
@@ -3054,9 +3054,9 @@
          "max":36.0,
          "avg":1.5001119319453768
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"GPU Bus Load",
             "description":"GPU Bus Load"
          },
@@ -3068,9 +3068,9 @@
          "max":4.0,
          "avg":0.047011417058428505
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"GPU Memory Usage",
             "description":"GPU Memory Usage"
          },
@@ -3082,9 +3082,9 @@
          "max":10.203032060102982,
          "avg":7.0006480415819778
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"GPU D3D Usage",
             "description":"GPU D3D Usage"
          },
@@ -3096,9 +3096,9 @@
          "max":42.459124705882353,
          "avg":5.7022509474016445
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"GPU Video Decode 0 Usage",
             "description":"GPU Video Decode 0 Usage"
          },
@@ -3110,9 +3110,9 @@
          "max":27.449818529130848,
          "avg":1.704477854089983
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"GPU Video Encode 0 Usage",
             "description":"GPU Video Encode 0 Usage"
          },
@@ -3124,9 +3124,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"GPU Computing (Compute_0) Usage",
             "description":"GPU Computing (Compute_0) Usage"
          },
@@ -3138,9 +3138,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"GPU Computing (Compute_1) Usage",
             "description":"GPU Computing (Compute_1) Usage"
          },
@@ -3152,9 +3152,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":7,
-         "label":{  
+         "label":{
             "value":"GPU VR Usage",
             "description":"GPU VR Usage"
          },
@@ -3166,9 +3166,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"GPU Fan0",
             "description":"GPU Fan0"
          },
@@ -3180,9 +3180,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"GPU Fan1",
             "description":"GPU Fan1"
          },
@@ -3194,9 +3194,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Performance Limit - Power",
             "description":"Performance Limit - Power"
          },
@@ -3208,9 +3208,9 @@
          "max":1.0,
          "avg":0.0011193194537721042
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Performance Limit - Thermal",
             "description":"Performance Limit - Thermal"
          },
@@ -3222,9 +3222,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Performance Limit - Reliability Voltage",
             "description":"Performance Limit - Reliability Voltage"
          },
@@ -3236,9 +3236,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Performance Limit - Max Operating Voltage",
             "description":"Performance Limit - Max Operating Voltage"
          },
@@ -3250,9 +3250,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Performance Limit - Utilization",
             "description":"Performance Limit - Utilization"
          },
@@ -3264,9 +3264,9 @@
          "max":16.0,
          "avg":15.982090888739664
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Performance Limit - SLI GPUBoost Sync",
             "description":"Performance Limit - SLI GPUBoost Sync"
          },
@@ -3278,9 +3278,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Total GPU Power (normalized) [% of TDP]",
             "description":"Total GPU Power (normalized) [% of TDP]"
          },
@@ -3292,9 +3292,9 @@
          "max":24.52,
          "avg":9.2123689276919531
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Total GPU Power [% of TDP]",
             "description":"Total GPU Power [% of TDP]"
          },
@@ -3306,9 +3306,9 @@
          "max":24.321,
          "avg":8.7585801432729014
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"GPU Memory Allocated",
             "description":"GPU Memory Allocated"
          },
@@ -3320,9 +3320,9 @@
          "max":1149.26953125,
          "avg":788.55244798662659
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"GPU D3D Memory Dedicated",
             "description":"GPU D3D Memory Dedicated"
          },
@@ -3334,9 +3334,9 @@
          "max":939.5859375,
          "avg":578.37952275016437
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"GPU D3D Memory Dynamic",
             "description":"GPU D3D Memory Dynamic"
          },
@@ -3348,9 +3348,9 @@
          "max":276.2890625,
          "avg":68.021462076057887
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"PCIe Link Speed",
             "description":"PCIe Link Speed"
          },
@@ -3362,9 +3362,9 @@
          "max":8.0,
          "avg":2.6097492724423521
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Total DL",
             "description":"Total DL"
          },
@@ -3376,9 +3376,9 @@
          "max":1655.1999750137329,
          "avg":721.85587782536277
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Total UP",
             "description":"Total UP"
          },
@@ -3390,9 +3390,9 @@
          "max":47.367018699645996,
          "avg":23.157371271208888
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Current DL rate",
             "description":"Current DL rate"
          },
@@ -3404,9 +3404,9 @@
          "max":27315.977673281992,
          "avg":85.659367135059654
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Current UP rate",
             "description":"Current UP rate"
          },
@@ -3418,9 +3418,9 @@
          "max":561.142531842417,
          "avg":2.4836450657936813
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Total DL",
             "description":"Total DL"
          },
@@ -3432,9 +3432,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Total UP",
             "description":"Total UP"
          },
@@ -3446,9 +3446,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Current DL rate",
             "description":"Current DL rate"
          },
@@ -3460,9 +3460,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Current UP rate",
             "description":"Current UP rate"
          },
@@ -3474,9 +3474,9 @@
          "max":0.0,
          "avg":0.0
       },
-      {  
+      {
          "type":8,
-         "label":{  
+         "label":{
             "value":"Total Errors",
             "description":"Total Errors"
          },
@@ -3490,7 +3490,7 @@
       }
    ],
    "exception":null,
-   "labels":[  
+   "labels":[
       "Mobo",
       "CPU [#0]: Intel Core i7-7700K",
       "CPU [#0]: Intel Core i7-7700K: DTS",
