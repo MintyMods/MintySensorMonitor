@@ -1,3 +1,9 @@
+Request
+```
+{'source':'MSM[JSON]HWiNFO','type':'info.mintymods.msm.MsmMonitorRequest','debug':false}
+```
+
+Response
 ```
 {  
    "sensors":[  
