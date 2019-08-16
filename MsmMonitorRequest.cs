@@ -11,8 +11,6 @@ namespace mintymods {
 			type = GetType().Name;
 			
 			try {
-
-				MsmLogging.configureLogging();
 				MsmMonitorRequestParameters data = Newtonsoft.Json.JsonConvert.DeserializeObject<MsmMonitorRequestParameters>(json);
 				debugRequestJsonData(data);
 				this.source = data.source;
@@ -21,7 +19,7 @@ namespace mintymods {
 				this.help = data.help;
 
 			} catch (Exception exception) {
-				log.Debug("Unable to parse JSON request @#");
+				log.Error("Unable to parse JSON request @JSON#" + json);
 				var e = new MsmException("Unable to parse JSON request", exception);
 				e.hint.message = "Your JSON parameter was malformed";
 				e.hint.input = Newtonsoft.Json.JsonConvert.SerializeObject(json);

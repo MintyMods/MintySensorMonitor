@@ -5,7 +5,7 @@ namespace mintymods {
 	public static class MsmLogging {
 				
 		static readonly log4net.ILog log = log4net.LogManager.GetLogger(System.Reflection.MethodBase.GetCurrentMethod().DeclaringType);
-		public static string LEVEL = "INFO";
+		public static string LEVEL = "DEBUG";
 		
 		public static void configureLogging() {
 			configureLogging(true);
@@ -15,7 +15,11 @@ namespace mintymods {
 			if (debug) {
 				setLoggingLevel(LEVEL);
 				((log4net.Repository.Hierarchy.Hierarchy)log4net.LogManager.GetRepository()).RaiseConfigurationChanged(EventArgs.Empty);
-				log.Info(" ** Debug logging enabled ** ");
+				log.Info("Logging enabled for the follow levels ");
+				log.Fatal(" ** Fatal ** ");
+				log.Error(" ** Error ** ");
+				log.Info(" ** Info ** ");
+				log.Debug(" ** Debug ** ");
 			} 
 			
 		}

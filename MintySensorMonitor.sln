@@ -1,13 +1,14 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
+# Visual Studio 2012
+# SharpDevelop 5.1
 VisualStudioVersion = 16.0.29025.244
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MintySensorMonitor", "MintySensorMonitor.csproj", "{ACEAF883-1776-4613-9A31-325737667F8D}"
 EndProject
-Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MintySm2MintySsJniWrapper", "..\MintySm2MintySsJniWrapper\MintySm2MintySsJniWrapper.vcxproj", "{41A3D763-09E6-4E1A-AFC4-6C2654574A50}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MintyServiceHWiNFO", "..\MintyServiceHWiNFO\MintyServiceHWiNFO.csproj", "{4691C76C-5674-4BB1-A505-A3BD496BA587}"
+EndProject
+Project("{0E96FCFA-9DAC-4534-AC18-01A90C368873}") = "MintySm2MintySsJniWrapper", "..\MintySm2MintySsJniWrapper\MintySm2MintySsJniWrapper.vcxproj", "{41A3D763-09E6-4E1A-AFC4-6C2654574A50}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -37,18 +38,6 @@ Global
 		{ACEAF883-1776-4613-9A31-325737667F8D}.Release|x64.Build.0 = Release|Any CPU
 		{ACEAF883-1776-4613-9A31-325737667F8D}.Release|x86.ActiveCfg = Release|x86
 		{ACEAF883-1776-4613-9A31-325737667F8D}.Release|x86.Build.0 = Release|x86
-		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Debug|Any CPU.ActiveCfg = Debug|Win32
-		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Debug|ARM.ActiveCfg = Debug|Win32
-		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Debug|x64.ActiveCfg = Debug|x64
-		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Debug|x64.Build.0 = Debug|x64
-		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Debug|x86.ActiveCfg = Debug|Win32
-		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Debug|x86.Build.0 = Debug|Win32
-		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Release|Any CPU.ActiveCfg = Release|Win32
-		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Release|ARM.ActiveCfg = Release|Win32
-		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Release|x64.ActiveCfg = Release|x64
-		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Release|x64.Build.0 = Release|x64
-		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Release|x86.ActiveCfg = Release|Win32
-		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Release|x86.Build.0 = Release|Win32
 		{4691C76C-5674-4BB1-A505-A3BD496BA587}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{4691C76C-5674-4BB1-A505-A3BD496BA587}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4691C76C-5674-4BB1-A505-A3BD496BA587}.Debug|ARM.ActiveCfg = Debug|Any CPU
@@ -65,6 +54,22 @@ Global
 		{4691C76C-5674-4BB1-A505-A3BD496BA587}.Release|x64.Build.0 = Release|Any CPU
 		{4691C76C-5674-4BB1-A505-A3BD496BA587}.Release|x86.ActiveCfg = Release|Any CPU
 		{4691C76C-5674-4BB1-A505-A3BD496BA587}.Release|x86.Build.0 = Release|Any CPU
+		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Debug|ARM.ActiveCfg = Debug|ARM
+		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Debug|ARM.Build.0 = Debug|ARM
+		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Debug|x64.ActiveCfg = Debug|x64
+		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Debug|x64.Build.0 = Debug|x64
+		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Debug|x86.ActiveCfg = Debug|x86
+		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Debug|x86.Build.0 = Debug|x86
+		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Release|ARM.ActiveCfg = Release|ARM
+		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Release|ARM.Build.0 = Release|ARM
+		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Release|x64.ActiveCfg = Release|x64
+		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Release|x64.Build.0 = Release|x64
+		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Release|x86.ActiveCfg = Release|x86
+		{41A3D763-09E6-4E1A-AFC4-6C2654574A50}.Release|x86.Build.0 = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

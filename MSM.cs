@@ -8,19 +8,22 @@ namespace mintymods {
 		const int REQUEST_BODY_OFFSET = 0;
 				
 		public static void Main(string[] commandLineArguments) { 
-			log.Debug("MSM starting...");
+			MsmLogging.configureLogging();
+			log.Debug("MSM starting#args@" + commandLineArguments.Length);
 			if (commandLineArguments.Length != 1) {
-				log.Debug("Invalid command line specified : @JSON#" + commandLineArguments);
+				log.Warn("Invalid command line specified : @JSON#" + commandLineArguments);
 				sendInvalidCommandLineJsonResponse(commandLineArguments);
 			} else {
 
 				try {
 					var json = commandLineArguments[REQUEST_BODY_OFFSET];
 					var request = new MsmMonitorRequest(json);
+					log.Debug("Request forged@" + request.ToString());
 					var monitor = new MintySenorMonitor(request);
+					log.Debug("Monitor forged@" + monitor.ToString());
 					sendValidJsonResponse(monitor.getSensorInfoAsJSON());
 				} catch (MsmException e) {
-					log.Debug("@"+ e.InnerException.Source + "#" + e.Message, e);
+					log.Error("@"+ e.InnerException.Source + "#" + e.Message, e);
 					sendInvalidJsonResponse(e);
 				}
 				
