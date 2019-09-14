@@ -15,6 +15,7 @@ namespace mintymods {
 		public string version = "0.5A";
 		public bool debug;
         public TimeSpan time_taken;
+        public UInt32 polling_period;
 
         public MsmMonitorResponse() {
 

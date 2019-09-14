@@ -2,7 +2,7 @@
 /bin/
 /jna/
 /jni/
-
+*.log
 
 ### STS ###
 .apt_generated
