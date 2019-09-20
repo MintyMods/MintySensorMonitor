@@ -5,23 +5,23 @@ namespace mintymods {
 	public class MsmSensorLabel {
 		
 		public string value;
-		public string description;
+		public string desc;
 
-		public MsmSensorLabel(string value, string description) {
+		public MsmSensorLabel(string value, string desc) {
 			this.value = value;
-			this.description = description;
+			this.desc = desc;
 		}
 		
 		public void setValue(string value) {
 			this.value = value;
 		}
 
-		public void setDescription(string description) {
-			this.description = description;
+		public void setDescription(string desc) {
+			this.desc = desc;
 		}
 
 		public string getSensorLabel() {
-			return value + "#" + description;
+			return value + "#" + desc;
 		}
 
 		public string getValue() {
@@ -29,7 +29,7 @@ namespace mintymods {
 		}
 
 		public string getDescription() {
-			return description;
+			return desc;
 		}
 
 		
