@@ -12,7 +12,7 @@ namespace mintymods {
 		public List<string> labels;
 		public string type;
 		public string source = "MSM[SERVICE]";
-		public string version = "0.5A";
+		public string version = "1.0";
 		public bool debug;
         public TimeSpan time_taken;
         public UInt32 polling_period;
